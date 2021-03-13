@@ -1,4 +1,49 @@
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.nav-link {
+    margin-left: 15px;
+}
+
+
+
+
 .sidebar {
-  background-color: $sidebar-color;
-  height: 100%;
+    position: fixed;
+    min-width: 15%;
+    height: 100vh;
+    background-color: $sidebar-color;
+    color: $main-text-color;
+    
+    h2 {
+        color: $text-color;
+        font-family: $logo-font;
+        font-size: 42px;
+        font-weight: 100;
+        margin: 20px 0 0 30px;
+        i {
+            font-size: 30px;
+            margin-left: 50px;
+            color: $main-text-color;
+        }
+    }
+    .sidebar-menu {
+        margin-left: 30px;
+        font-family: $text-font;
+        li {
+            margin-bottom: 30px;
+        }
+    }
+  
+}
+
+.topbar {
+    ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
 }
