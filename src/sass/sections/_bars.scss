@@ -5,34 +5,25 @@ ul {
   padding-left: 0;
 }
 
-.nav-link {
-  margin-left: 15px;
-}
-
 .main-container {
-  padding: 2px;  // test
-  border: 2px solid purple;  // test
   display: flex;
 }
 
 .title {
-  color: $main-text-color;
-  font-family: $text-font;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 /* SIDEBAR */
 
 .sidebar {
-  margin: 2px;  // test
-  border: 2px solid red;  // test
+  position: fixed;
   height: 100vh;
   width: 15%;
   background-color: $sidebar-color;
   color: $main-text-color;
     
   h2 {
-    color: $text-color;
+    color: $main-color;
     font-family: $logo-font;
     font-size: 42px;
     font-weight: 100;
@@ -47,7 +38,10 @@ ul {
 
   .sidebar-menu {
     margin-left: 20px;
-    font-family: $text-font;
+
+    .sb-nav-link {
+      margin-left: 15px;
+    }
 
     li {
       margin-bottom: 30px;
@@ -56,8 +50,8 @@ ul {
 
   .manager {
     padding: 0 30px;
-    font-family: $text-font;
     font-size: 15px;
+    border-top: solid $main-text-color 1px;
 
     .manager-list {
       display: flex;
@@ -81,30 +75,112 @@ ul {
 
 .content-container {
   width: 85%;
-  border: 2px solid orange;  // test
+  margin-left: 15%;
   
-  .topbar {
-    margin: 2px;  // test
-    border: 2px solid red;  // test
+  .topbar {    
+    position: fixed;
+    background-color: $main-color;
+    display: flex;
+    justify-content: flex-end;
+    width: 85%;
+    border-bottom: solid $main-text-color 1px;
 
-    ul {
+    .topbar-menu {
+      display: flex;
       flex-direction: row;
-      justify-content: flex-end;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+
+      .topbar-item {
+        margin: auto;
+        border-left: solid $main-text-color 1px;
+        padding: 10px 0;
+
+        .tb-profile {
+          margin-right: 10px;
+          text-decoration: none;
+          color: $option-text-color;
+        }
+
+        i {
+          margin: 0 20px;          
+
+        }
+      }
     }
   }
 
   .main-side {
-    margin: 2px;  // test
-    border: 2px solid red;  // test
+    padding: 15px;
+    margin-top: 45px;
+
+    .title {
+      padding-top: 10px;
+    }
 
     .general {
-      margin: 2px;  // test
-      border: 2px solid blue;  // test
+      background-color: $main-color;      
+
+      .general-date-picker {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 40px;
+        border-top: solid $main-text-color 1px;
+
+        .date-picker {
+          padding: 3px 0 2px 0;
+          border: 1px $main-text-color solid;
+        }
+
+        .date-picker {
+          margin-right: 10px;
+
+          form {
+            input {
+              background: none;
+              border: none;
+              border-left: solid $main-text-color 1px;;
+              width: 130px;
+              margin: 0;
+              outline: 0;
+            }
+          }
+        }
+      }
+
+      .stats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px auto;
+        padding: 25px;
+        border-top: solid $main-text-color 1px;
+
+        .stat-box {
+          display: flex;
+          flex-direction: column;
+          width: 45%;
+
+          .stat-detail {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+
+      .stats-chart {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 25px;
+      }
     }
 
     .links {
-      margin: 2px;  // test
-      border: 2px solid blue;  // test
+      margin-top: 20px;
+      background-color: $main-color;
+
     }
   }
 }
