@@ -10,58 +10,111 @@
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="vendor/bootstrap-grid.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
-    <!-- Sidebar / Topbar -->
-    <div class="row">
-        <div class="sidebar col-2">
+    
+    <div class="main-container">
+        <div class="sidebar">
             <h2>Just do it<i class="fas fa-bars"></i></h2>
             <ul class="sidebar-menu">
                 <li>
-                    <i class="icon-general" alt="" ></i><a class="nav-link">General</a>
+                    <i class="icon-general"></i><a class="nav-link">General</a>
                 </li>
                 <li>
-                    <i class="icon-details" alt=""></i><a class="nav-link">Details</a>
+                    <i class="icon-details"></i><a class="nav-link">Details</a>
                 </li>
                 <li>
-                    <i class="icon-links" alt=""></i><a class="nav-link" >Links</a>
+                    <i class="icon-links"></i><a class="nav-link">Links</a>
                 </li>
                 <li>
-                    <i class="icon-banners" alt=""></i><a class="nav-link" >Banners</a>
+                    <i class="icon-banners"></i><a class="nav-link">Banners</a>
                 </li>
                 <li>
-                    <i class="icon-personaldata" alt=""></i><a class="nav-link" >Personal data</a>
+                    <i class="icon-personaldata"></i><a class="nav-link">Personal data</a>
                 </li>
                 <li>
-                    <i class="icon-payout" alt=""></i><a class="nav-link" >Payout</a>
+                    <i class="icon-payout"></i><a class="nav-link">Payout</a>
                 </li>
                 <li>
-                    <i class="icon-postback" alt=""></i><a class="nav-link" >Postback</a>
+                    <i class="icon-postback"></i><a class="nav-link">Postback</a>
                 </li>
             </ul>
+            
             <div class="manager">
-                <a href="#">YOUR MANAGER</a>
+                <h3>YOUR MANAGER</h3>
+                <div class="manager-list">
+                    <img class="manager-img" src="images/manager-1.jpg">
+                    <a class="manager-name">Mikhael E.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-container">
+            <div class="topbar">
+                <ul class="topbar-menu">
+                    <li>
+                        <i class="icon-wallet"></i><a class="nav-link">$1,500.00</a>                    
+                        <i class="icon-arrow-down"></i><a class="nav-link"></a>
+                    </li>
+                    <li>
+                        <i class="icon-notification"></i><a class="nav-link"></a>
+                    </li>
+                    <li>
+                        <i class="icon-profile"></i><a class="nav-link" href="#">Leonardo Dicaprio</a>
+                    </li>
+                    <li>
+                        <i class="icon-quit"></i><a class="nav-link"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main-side">
+                <div class="general">
+                    <div class="title">
+                        <h3 class="container-title">GENERAL STATISTICS</h3>
+                    </div>
+                    <div class="general-date-picker">
+                        <div class="date-picker">
+                            <input type="text" name="date" class="date-from">
+                            <input type="text" name="date" class="date-to">
+                          </div>
+                        <div class="btn-undo">
+                            <button class="btn btn-refresh"><i class="icon-refresh"></i></button>
+                        </div>
+                    </div>
+                    <did class="stats">
+                        <div class="stat-left">
+                            <div class="stat-details">
+                              <p class="title">Visit Signups</p>
+                              <p class="number">124</p>
+                            </div>
+                            <div class="stat-details">
+                              <p class="title">FTD</p>
+                              <p class="number">445</p>
+                            </div>
+                          </div>
+                          <div class="stat-right">
+                            <div class="stat-details">
+                              <p class="title">Net Deposit</p>
+                              <p class="number">564</p>
+                            </div>
+                            <div class="stat-details">
+                              <p class="title">Turn over</p>
+                              <p class="number">432</p>
+                            </div>
+                        </div>
+                    </did>
+
+                </div>
+                <div class="links">
+                    <div class="title">
+                        <h3 class="container-title">LINKS</h3>
+                    </div>                    
+                </div>
+
             </div>
         </div>
 
-        <div class="topbar col-10">
-            <ul class="topbar-menu">
-                <li>
-                    <i class="icon-wallet" alt=""></i><a class="nav-link"></i>$1,500.00</a>                    
-                    <i class="icon-arrow-down" alt="" href="#"></i><a class="nav-link" ></a>
-                </li>
-                <li>
-                    <i class="icon-notification" alt="" href="#"></i><a class="nav-link" ></a>
-                </li>
-                <li>
-                    <i class="icon-profile" alt=""></i><a class="nav-link" href="#">Leonardo Dicaprio</a>
-                </li>
-                <li>
-                    <i class="icon-quit" alt="" href="#"></i><a class="nav-link" ></a>
-                </li>
-            </ul>
-        </div>
     </div>
 
 </body>

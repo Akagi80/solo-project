@@ -1,49 +1,111 @@
 ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
 }
 
 .nav-link {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
+.main-container {
+  padding: 2px;  // test
+  border: 2px solid purple;  // test
+  display: flex;
+}
 
+.title {
+  color: $main-text-color;
+  font-family: $text-font;
+  margin-left: 10px;
+}
 
+/* SIDEBAR */
 
 .sidebar {
-    position: fixed;
-    min-width: 15%;
-    height: 100vh;
-    background-color: $sidebar-color;
-    color: $main-text-color;
+  margin: 2px;  // test
+  border: 2px solid red;  // test
+  height: 100vh;
+  width: 15%;
+  background-color: $sidebar-color;
+  color: $main-text-color;
     
-    h2 {
-        color: $text-color;
-        font-family: $logo-font;
-        font-size: 42px;
-        font-weight: 100;
-        margin: 20px 0 0 30px;
-        i {
-            font-size: 30px;
-            margin-left: 50px;
-            color: $main-text-color;
-        }
+  h2 {
+    color: $text-color;
+    font-family: $logo-font;
+    font-size: 42px;
+    font-weight: 100;
+    margin: 20px 0 0 20px;
+
+    i {
+      font-size: 30px;
+      margin-left: 50px;
+      color: $main-text-color;
     }
-    .sidebar-menu {
-        margin-left: 30px;
-        font-family: $text-font;
-        li {
-            margin-bottom: 30px;
-        }
+  }
+
+  .sidebar-menu {
+    margin-left: 20px;
+    font-family: $text-font;
+
+    li {
+      margin-bottom: 30px;
     }
-  
+  }
+
+  .manager {
+    padding: 0 30px;
+    font-family: $text-font;
+    font-size: 15px;
+
+    .manager-list {
+      display: flex;
+      margin: auto;
+      align-items: center;
+
+      .manager-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      a {
+        margin-left: 10px;
+      }
+    }
+  }  
 }
 
-.topbar {
+/* CONTENT CONTAINER */
+
+.content-container {
+  width: 85%;
+  border: 2px solid orange;  // test
+  
+  .topbar {
+    margin: 2px;  // test
+    border: 2px solid red;  // test
+
     ul {
-        flex-direction: row;
-        justify-content: flex-end;
+      flex-direction: row;
+      justify-content: flex-end;
     }
+  }
+
+  .main-side {
+    margin: 2px;  // test
+    border: 2px solid red;  // test
+
+    .general {
+      margin: 2px;  // test
+      border: 2px solid blue;  // test
+    }
+
+    .links {
+      margin: 2px;  // test
+      border: 2px solid blue;  // test
+    }
+  }
 }
+
