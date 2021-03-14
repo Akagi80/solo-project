@@ -76,112 +76,106 @@ ul {
 .content-container {
   width: 85%;
   margin-left: 15%;
+}
   
-  .topbar {    
-    position: fixed;
-    background-color: $main-color;
+.topbar {    
+  position: fixed;
+  background-color: $main-color;
+  display: flex;
+  justify-content: flex-end;
+  width: 85%;
+  border-bottom: solid $main-text-color 1px;
+
+  .topbar-menu {
     display: flex;
-    justify-content: flex-end;
-    width: 85%;
-    border-bottom: solid $main-text-color 1px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;      
+  }
+}
 
-    .topbar-menu {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 0;
-      margin: 0;
+.topbar-item {
+  margin: auto;
+  border-left: solid $main-text-color 1px;
+  padding: 10px 0;
 
-      .topbar-item {
-        margin: auto;
+  .tb-profile {
+    margin-right: 10px;
+    text-decoration: none;
+    color: $option-text-color;
+  }
+
+  i {
+    margin: 0 20px;          
+
+  }
+}
+
+.main-side {
+  padding: 15px;
+  margin-top: 45px;
+
+  .title {
+    padding-top: 10px;
+  }
+
+  .general {
+    background-color: $main-color; 
+  }     
+
+  .general-date-picker {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+    border-top: solid $main-text-color 1px;
+
+    .date-picker {
+      padding: 3px 0 2px 0;
+      border: 1px $main-text-color solid;
+      margin-right: 10px;
+
+      input {
+        background: none;
+        border: none;
         border-left: solid $main-text-color 1px;
-        padding: 10px 0;
+        width: 130px;
+        margin: 0;
+        outline: 0;
+      }        
+    }
+  }
+    
+  .stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 25px;
+    border-top: solid $main-text-color 1px;
 
-        .tb-profile {
-          margin-right: 10px;
-          text-decoration: none;
-          color: $option-text-color;
-        }
+    .stat-box {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
 
-        i {
-          margin: 0 20px;          
-
-        }
+      .stat-detail {
+        display: flex;
+        flex-direction: row;
       }
     }
   }
 
-  .main-side {
-    padding: 15px;
-    margin-top: 45px;
+  .stats-chart {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+  }  
 
-    .title {
-      padding-top: 10px;
-    }
-
-    .general {
-      background-color: $main-color;      
-
-      .general-date-picker {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        padding-top: 40px;
-        border-top: solid $main-text-color 1px;
-
-        .date-picker {
-          padding: 3px 0 2px 0;
-          border: 1px $main-text-color solid;
-        }
-
-        .date-picker {
-          margin-right: 10px;
-
-          form {
-            input {
-              background: none;
-              border: none;
-              border-left: solid $main-text-color 1px;;
-              width: 130px;
-              margin: 0;
-              outline: 0;
-            }
-          }
-        }
-      }
-
-      .stats {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 40px auto;
-        padding: 25px;
-        border-top: solid $main-text-color 1px;
-
-        .stat-box {
-          display: flex;
-          flex-direction: column;
-          width: 45%;
-
-          .stat-detail {
-            display: flex;
-            flex-direction: row;
-          }
-        }
-      }
-
-      .stats-chart {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 25px;
-      }
-    }
-
-    .links {
-      margin-top: 20px;
-      background-color: $main-color;
-
-    }
+  .links {
+    margin-top: 20px;
+    background-color: $main-color;
   }
 }
 
