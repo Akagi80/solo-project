@@ -13,6 +13,26 @@ ul {
   margin-left: 20px;
 }
 
+.value {
+  color: $sidebar-color;
+}
+
+.stat-title {
+  font-weight: bold;
+}
+
+.btn {
+  background-color: $btn-color;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 14px;
+  color: $main-color;
+  padding: 10px;
+}
+
+
+
 /* SIDEBAR */
 
 .sidebar {
@@ -128,7 +148,7 @@ ul {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-top: 40px;
+    padding: 40px;
     border-top: solid $main-text-color 1px;
 
     .date-picker {
@@ -146,13 +166,10 @@ ul {
       }        
     }
   }
-    
+
   .stats {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 40px auto;
-    padding: 25px;
+    justify-content: space-between;
     border-top: solid $main-text-color 1px;
 
     .stat-box {
@@ -160,10 +177,20 @@ ul {
       flex-direction: column;
       width: 45%;
 
-      .stat-detail {
+      .stat-details {
+        margin: 20px;
+        border-bottom: solid $main-text-color 1px;
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
       }
+    }
+
+    .stat-left {
+      padding-left: 20%;
+    }
+
+    .stat-right {
+      padding-right: 20%;
     }
   }
 
@@ -176,6 +203,11 @@ ul {
   .links {
     margin-top: 20px;
     background-color: $main-color;
+  }
+
+  .btn-add-new {
+    display: flex;
+    justify-content: center;
   }
 }
 
