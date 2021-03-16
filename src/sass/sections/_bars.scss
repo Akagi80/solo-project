@@ -5,8 +5,27 @@ ul {
   padding-left: 0;
 }
 
+.icon {
+  font-size: 17px;
+  transition: $transition;
+
+  &:hover {
+    color: $btn-color;
+  }
+} 
+
 .main-container {
   display: flex;
+}
+
+.link {
+  text-decoration: none;
+  color: $option-text-color;
+  transition: $transition;
+  
+  &:hover {
+    color: $btn-color;
+  }
 }
 
 .title {
@@ -23,15 +42,19 @@ ul {
 
 .btn {
   background-color: $btn-color;
-  border: none;
+  border: 2px solid $btn-color;
   border-radius: 5px;
   margin: 10px;
   font-size: 14px;
   color: $main-color;
   padding: 10px;
+  transition: $transition;
+
+  &:hover {
+    color: $btn-color;
+    background-color: $main-color;
+  }
 }
-
-
 
 /* SIDEBAR */
 
@@ -120,15 +143,12 @@ ul {
   border-left: solid $main-text-color 1px;
   padding: 10px 0;
 
-  .tb-profile {
-    margin-right: 10px;
-    text-decoration: none;
-    color: $option-text-color;
+  .link {
+    margin-right: 20px;
   }
 
   i {
-    margin: 0 20px;          
-
+    margin: 0 20px;
   }
 }
 
@@ -139,75 +159,136 @@ ul {
   .title {
     padding-top: 10px;
   }
+}
 
-  .general {
-    background-color: $main-color; 
-  }     
+.general {
+  background-color: $main-color; 
+}     
 
-  .general-date-picker {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 40px;
-    border-top: solid $main-text-color 1px;
+.general-date-picker {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  border-top: solid $main-text-color 1px;
 
-    .date-picker {
-      padding: 3px 0 2px 0;
-      border: 1px $main-text-color solid;
+  .date-picker {
+    padding: 3px 0 2px 0;
+    border: 1px $main-text-color solid;
+    margin: 10px;
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+
+    input {
+      background: none;
+      border: none;
+      width: 130px;
+      height: 35px;
+      margin: 0;
+      outline: 0;
+      padding-left: 10px;
+    }    
+
+    .date-to {
+      border-left: solid $main-text-color 1px;   
+       
+    }
+
+    .icon {
       margin-right: 10px;
-
-      input {
-        background: none;
-        border: none;
-        border-left: solid $main-text-color 1px;
-        width: 130px;
-        margin: 0;
-        outline: 0;
-      }        
     }
   }
+}
 
-  .stats {
+.stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid $main-text-color 1px;
+
+  .stat-box {
     display: flex;
-    justify-content: space-between;
-    border-top: solid $main-text-color 1px;
+    flex-direction: column;
+    width: 45%;
 
-    .stat-box {
+    .stat-details {
+      margin: 20px;
+      border-bottom: solid $main-text-color 1px;
       display: flex;
-      flex-direction: column;
-      width: 45%;
-
-      .stat-details {
-        margin: 20px;
-        border-bottom: solid $main-text-color 1px;
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-
-    .stat-left {
-      padding-left: 20%;
-    }
-
-    .stat-right {
-      padding-right: 20%;
+      justify-content: space-between;
     }
   }
 
-  .stats-chart {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 25px;
-  }  
-
-  .links {
-    margin-top: 20px;
-    background-color: $main-color;
+  .stat-left {
+    padding-left: 20%;
   }
+
+  .stat-right {
+    padding-right: 20%;
+  }
+}
+
+.stats-chart {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}  
+
+.links {
+  margin-top: 20px;
+  background-color: $main-color;
+}
+
+.links-table {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25%;
+  border-top: solid $main-text-color 1px;
 
   .btn-add-new {
     display: flex;
     justify-content: center;
+    padding: 30px;
   }
 }
 
+.link-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0;
+  border-top: solid $main-text-color 1px;
+          
+  .stat-title, .icon {
+    margin: 5px 0;
+    padding: 0;
+  }
+
+  .stat-title {
+    margin-left: 10px;
+    width: 40%;
+  }
+  
+  .link {        
+    width: 50%;
+  }
+
+  .icon {
+    width: 5%;
+    display: none;
+  }
+
+  &:hover {
+    background-color: $background-color;
+    cursor: pointer;
+
+    .icon {
+      display: inherit;  
+    }
+  }
+}
+
+.last-link {
+  border-bottom: solid $main-text-color 1px;
+}
