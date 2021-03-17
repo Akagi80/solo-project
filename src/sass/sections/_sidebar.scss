@@ -1,37 +1,52 @@
-.sidebar {
+.sidebar-container {
   position: fixed;
   height: 100vh;
-  width: 15%;
+  width: 230px;
+  z-index: 10;
   background-color: $sidebar-color;
   color: $main-text-color;
+
+  .header-container {
+    display: flex;
+    height: 60px;
       
-  h2 {
-    color: $main-color;
-    font-family: $logo-font;
-    font-size: 42px;
-    font-weight: 100;
-    margin: 20px 0 0 20px;
-  
-    i {
-      font-size: 30px;
-      margin-left: 50px;
-      color: $main-text-color;
+    h2 {
+      color: $main-color;
+      font-family: $logo-font;
+      font-size: 42px;
+      font-weight: 100;
+      margin: 10px 0 0 30px;
+      padding-right: 40px;
     }
+
+    .burger-btn {
+      padding-top: 10px;
+      font-size: 25px;
+      background-color: $sidebar-color;
+      color: $main-text-color;      
+    }
+
   }
-  
+
   .sidebar-menu {
-    margin-left: 20px;
+    margin-top: 5px;
 
     .sb-nav-link {
       margin-left: 15px;
     }
 
     li {
-      margin-bottom: 30px;
+      padding: 10px 0 10px 20px;
+
+      &:hover {
+        background-image: linear-gradient(to right, $btn-color 2%, $sidebar-hover-color 2%);
+        color: $main-color;
+        cursor: pointer;
+      }
     }
   }
   
-  .manager {
+  .manager-container {
     padding: 0 30px;
     font-size: 15px;
     border-top: solid $main-text-color 1px;
@@ -40,16 +55,40 @@
       display: flex;
       margin: auto;
       align-items: center;
+      position: relative;
  
       .manager-img {
         width: 40px;
         height: 40px;
         border-radius: 50%;
       }
+
+      .green-dot {
+        position: absolute;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: $online-color;
+        top: 1px;
+        left: 30px;
+      }
   
-      a {
+      .manager-name {
         margin-left: 10px;
+        color: $option-text-color;
       }
     }
   }  
+}
+
+@media (max-width: 991px){
+  .sidebar-container {
+    height: 60px;
+    width: 100vh;
+    z-index: 10;
+
+    .sidebar-menu, .manager-container {
+      display: none;
+    } 
+  }
 }

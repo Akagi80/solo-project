@@ -2,12 +2,12 @@
   display: flex;
 
   .main-container {
-    width: 85%;
-    margin-left: 15%;
+    width: 100%;
+    z-index: 8;
 
     .content-container {
-      padding: 15px;
-      margin-top: 25px;
+      padding: 15px 15px 15px 245px;
+      margin-top: 40px;
 
       .general-container, .links-container {
         background-color: $main-color;
@@ -48,16 +48,21 @@
     }
   }
 
-  .stats-chart {
+  .container-wrapper {
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding-bottom: 25px;
-  }  
+    margin: 20px auto;
+    padding: 20px 0;
+
+    //.chart {
+    //}
+  }
 
   .links-table {
     display: flex;
     flex-direction: column;
-    padding: 0 25%;
+    padding: 0 20%;
     border-top: solid $main-text-color 1px;
     
     .btn-add-new {
@@ -105,5 +110,12 @@
     .last-link {
       border-bottom: solid $main-text-color 1px;
     }
+  }
+}
+
+@media (max-width: 991px) {
+  .content-container {
+    padding: 15px;
+    margin-top: 40px;
   }
 }

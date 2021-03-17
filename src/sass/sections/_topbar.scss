@@ -3,7 +3,9 @@
   background-color: $main-color;
   display: flex;
   justify-content: flex-end;
-  width: 85%;
+  width: 100%;
+  height: 60px;
+  z-index: 9;
   border-bottom: solid $main-text-color 1px;
   
   .topbar-menu {
@@ -26,5 +28,27 @@
   
   i {
     margin: 0 20px;
+  }
+}
+
+.bell {
+  margin: auto;
+  align-items: center;
+  position: relative;
+
+  .orange-dot {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: $btn-color;
+    top: 8px;
+    left: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .topbar {
+    display: none;
   }
 }
