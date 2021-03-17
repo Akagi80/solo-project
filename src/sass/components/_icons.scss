@@ -1,0 +1,13 @@
+.icon {
+  font-size: 17px;
+  transition: $transition;
+  
+  &:hover {
+    color: $btn-color;
+    cursor: pointer;
+  }
+}
+  
+.icon-refresh {
+  font-size: 17px;
+}

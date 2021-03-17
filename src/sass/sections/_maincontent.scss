@@ -1,0 +1,109 @@
+.main-side-container {
+  display: flex;
+
+  .main-container {
+    width: 85%;
+    margin-left: 15%;
+
+    .content-container {
+      padding: 15px;
+      margin-top: 25px;
+
+      .general-container, .links-container {
+        background-color: $main-color;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  
+  .value {
+    color: $sidebar-color;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid $main-text-color 1px;
+    
+    .stat-box {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+    
+      .stat-details {
+        margin: 20px;
+        border-bottom: solid $main-text-color 1px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    
+    .stat-left {
+      padding-left: 20%;
+    }
+    
+    .stat-right {
+      padding-right: 20%;
+    }
+  }
+
+  .stats-chart {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+  }  
+
+  .links-table {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25%;
+    border-top: solid $main-text-color 1px;
+    
+    .btn-add-new {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+  
+    .link-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 20px 0;
+      border-top: solid $main-text-color 1px;
+
+      .stat-title, .icon {
+        margin: 5px 0;
+        padding: 0;
+      }
+      
+      .stat-title {
+        margin-left: 10px;
+        width: 40%;
+      }
+        
+      .link {        
+        width: 50%;
+      }
+      
+      .icon {
+        width: 5%;
+        display: none;
+      }
+      
+      &:hover {
+        background-color: $background-color;
+        cursor: pointer;
+      
+        .icon {
+          display: inherit;  
+        }
+      }
+    }
+
+    .last-link {
+      border-bottom: solid $main-text-color 1px;
+    }
+  }
+}

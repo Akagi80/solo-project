@@ -1,0 +1,10 @@
+.link {
+  text-decoration: none;
+  color: $option-text-color;
+  transition: $transition;
+  
+  &:hover {
+    color: $btn-color;
+  }
+}
+  

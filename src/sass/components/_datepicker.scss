@@ -1,0 +1,35 @@
+.general-date-picker {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  border-top: solid $main-text-color 1px;
+    
+  .date-picker {
+    padding: 3px 0 2px 0;
+    border: 1px $main-text-color solid;
+    margin: 10px;
+    
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+    
+    input {
+      background: none;
+      border: none;
+      width: 130px;
+      height: 35px;
+      margin: 0;
+      outline: 0;
+      padding-left: 10px;
+    }    
+    
+    .date-to {
+      border-left: solid $main-text-color 1px;
+    }
+
+    .icon {
+      margin-right: 10px;
+    }
+  }
+}

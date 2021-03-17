@@ -1,0 +1,30 @@
+.topbar {    
+  position: fixed;
+  background-color: $main-color;
+  display: flex;
+  justify-content: flex-end;
+  width: 85%;
+  border-bottom: solid $main-text-color 1px;
+  
+  .topbar-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;      
+  }
+}
+  
+.topbar-item {
+  margin: auto;
+  border-left: solid $main-text-color 1px;
+  padding: 10px 0;
+ 
+  .link {
+    margin-right: 20px;
+  }
+  
+  i {
+    margin: 0 20px;
+  }
+}

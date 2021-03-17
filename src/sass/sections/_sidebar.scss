@@ -1,0 +1,55 @@
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 15%;
+  background-color: $sidebar-color;
+  color: $main-text-color;
+      
+  h2 {
+    color: $main-color;
+    font-family: $logo-font;
+    font-size: 42px;
+    font-weight: 100;
+    margin: 20px 0 0 20px;
+  
+    i {
+      font-size: 30px;
+      margin-left: 50px;
+      color: $main-text-color;
+    }
+  }
+  
+  .sidebar-menu {
+    margin-left: 20px;
+
+    .sb-nav-link {
+      margin-left: 15px;
+    }
+
+    li {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .manager {
+    padding: 0 30px;
+    font-size: 15px;
+    border-top: solid $main-text-color 1px;
+  
+    .manager-list {
+      display: flex;
+      margin: auto;
+      align-items: center;
+ 
+      .manager-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+  
+      a {
+        margin-left: 10px;
+      }
+    }
+  }  
+}
