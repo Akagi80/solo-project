@@ -1,121 +1,144 @@
-.main-side-container {
+.main-container {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 15px 15px 250px;
 
-  .main-container {
-    width: 100%;
-    z-index: 8;
-
-    .content-container {
-      padding: 15px 15px 15px 245px;
-      margin-top: 40px;
-
-      .general-container, .links-container {
-        background-color: $main-color;
-        margin-top: 20px;
-      }
-    }
+  .general-container, .links-container {
+    background-color: $main-color;
+    margin-top: 60px;
   }
 
+  .links-container {
+    background-color: $main-color;
+    margin-top: 20px;
+  }
+}
+/*
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $option-text-color;
+  opacity: 50%;
+}
+*/
+
+.value {
+  color: $sidebar-color;
+} 
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid $main-text-color 1px;
+  padding: 0 20%;
   
-  .value {
-    color: $sidebar-color;
-  }
-
-  .stats {
-    display: flex;
-    justify-content: space-between;
-    border-top: solid $main-text-color 1px;
-    
-    .stat-box {
-      display: flex;
-      flex-direction: column;
-      width: 45%;
-    
-      .stat-details {
-        margin: 20px;
-        border-bottom: solid $main-text-color 1px;
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-    
-    .stat-left {
-      padding-left: 20%;
-    }
-    
-    .stat-right {
-      padding-right: 20%;
-    }
-  }
-
-  .container-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-    padding: 20px 0;
-
-    //.chart {
-    //}
-  }
-
-  .links-table {
+  .stat-box {
     display: flex;
     flex-direction: column;
-    padding: 0 20%;
-    border-top: solid $main-text-color 1px;
+    width: 45%;
     
-    .btn-add-new {
-      display: flex;
-      justify-content: center;
-      padding: 30px;
-    }
-  
-    .link-item {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      padding: 20px 0;
-      border-top: solid $main-text-color 1px;
-
-      .stat-title, .icon {
-        margin: 5px 0;
-        padding: 0;
-      }
-      
-      .stat-title {
-        margin-left: 10px;
-        width: 40%;
-      }
-        
-      .link {        
-        width: 50%;
-      }
-      
-      .icon {
-        width: 5%;
-        display: none;
-      }
-      
-      &:hover {
-        background-color: $background-color;
-        cursor: pointer;
-      
-        .icon {
-          display: inherit;  
-        }
-      }
-    }
-
-    .last-link {
+    .stat-details {
+      margin: 20px;
       border-bottom: solid $main-text-color 1px;
+      display: flex;
+      justify-content: space-between;
     }
+  }
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 20px 0;
+
+  img {
+    height: auto;
+    max-width: 100%;
+    display: block;      
+  }
+}
+
+.links-table {
+  display: flex;
+  flex-direction: column;
+  border-top: solid $main-text-color 1px;
+  padding: 0 20%;
+    
+  .btn-add-new {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+  
+  .link-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0;
+    border-top: solid $main-text-color 1px;
+
+    .stat-title, .icon {
+      margin: 5px 0;
+      padding: 0;
+    }
+      
+    .stat-title {
+      margin-left: 10px;
+      width: 40%;
+    }
+        
+    .link {        
+      width: 50%;
+    }
+      
+    .icon {
+      width: 5%;
+      display: none;
+    }
+      
+    &:hover {
+      background-color: $background-color;
+      cursor: pointer;
+    
+      .icon {
+        display: inherit;  
+      }
+    }
+  }
+
+  .last-link {
+    border-bottom: solid $main-text-color 1px;
   }
 }
 
 @media (max-width: 991px) {
-  .content-container {
-    padding: 15px;
-    margin-top: 40px;
+  .stats {
+    padding: 0;
+  }
+
+  .links-table {
+    padding: 0 5%;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  .main-container {
+    padding: 2%;
+
+    .general-date-picker {
+      padding: 10px 0;
+    }
+
+    .links-table {
+      padding: 0 2%;
+    }
   }
 }
+

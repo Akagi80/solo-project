@@ -12,69 +12,71 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <div class="main-side-container">
-        <div class="sidebar-container">
-            <div class="header-container">
-                <h2>Just do it</h2>
-                <button class="burger-btn btn"><i class="fas fa-bars"></i></button>
-            </div>
-            <ul class="sidebar-menu">
-                <li>
-                    <i class="icon-general icon"></i><a class="sb-nav-link">General</a>
-                </li>
-                <li>
-                    <i class="icon-details icon"></i><a class="sb-nav-link">Details</a>
-                </li>
-                <li>
-                    <i class="icon-links icon"></i><a class="sb-nav-link">Links</a>
-                </li>
-                <li>
-                    <i class="icon-banners icon"></i><a class="sb-nav-link">Banners</a>
-                </li>
-                <li>
-                    <i class="icon-personaldata icon"></i><a class="sb-nav-link">Personal data</a>
-                </li>
-                <li>
-                    <i class="icon-payout icon"></i><a class="sb-nav-link">Payout</a>
-                </li>
-                <li>
-                    <i class="icon-postback icon"></i><a class="sb-nav-link">Postback</a>
-                </li>
-            </ul>
+
+    <div class="overlay">
+        
+    </div>
+        
+    <div id="sidebar" class="sidebar-container">
+        <div class="header-container">
+            <h2 class="logo">Just do it</h2>
+            <button id="btnHamburger" href="#" class="burger-btn btn"><i class="fas fa-bars"></i></button>
+        </div>
+        <ul class="sidebar-menu">
+            <li>
+                <i class="icon-general icon"></i><a class="sb-nav-link">General</a>
+            </li>
+            <li>
+                <i class="icon-details icon"></i><a class="sb-nav-link">Details</a>
+            </li>
+            <li>
+                <i class="icon-links icon"></i><a class="sb-nav-link">Links</a>
+            </li>
+            <li>
+                <i class="icon-banners icon"></i><a class="sb-nav-link">Banners</a>
+            </li>
+            <li>
+                <i class="icon-personaldata icon"></i><a class="sb-nav-link">Personal data</a>
+            </li>
+            <li>
+                <i class="icon-payout icon"></i><a class="sb-nav-link">Payout</a>
+            </li>
+            <li>
+                <i class="icon-postback icon"></i><a class="sb-nav-link">Postback</a>
+            </li>
+        </ul>
             
-            <div class="manager-container">
-                <h3>YOUR MANAGER</h3>
-                <div class="manager-list">
-                    <img class="manager-img" src="images/manager-1.jpg" alt="">
-                    <span class="green-dot"></span>
-                    <a class="manager-name">Mikhael E.</a>
-                </div>
+        <div class="manager-container">
+            <h3>YOUR MANAGER</h3>
+            <div class="manager-list">
+                <img class="manager-img" src="images/manager-1.jpg" alt="">
+                <span class="green-dot"></span>
+                <a class="manager-name">Mikhael E.</a>
             </div>
         </div>
-        
-        <div class="main-container">
-            <div class="topbar">
-                <ul class="topbar-menu">
-                    <li class="topbar-item">
-                        <i class="icon-wallet icon"></i><a class="tb-nav-link">$1,500.00</a>                    
-                        <i class="icon-arrow-down icon"></i><a class="tb-nav-link" href="#"></a>
-                    </li>
-                    <li class="topbar-item bell">
-                        <i class="icon-notification icon"></i><a class="tb-nav-link" href="#"></a>
-                        <span class="orange-dot"></span>
-                    </li>
-                    <li class="topbar-item">
-                        <i class="icon-profile icon"></i><a class="tb-nav-link link" href="#">Leonardo Dicaprio</a>
-                    </li>
-                    <li class="topbar-item">
-                        <i class="icon-quit icon"></i><a class="tb-nav-link" href="#"></a>
-                    </li>
-                </ul>
-            </div>
+    </div>
 
-            <div class="content-container">
-                <div class="general-container">
+    <div class="topbar">
+            <ul class="topbar-menu">
+                <li class="topbar-item">
+                    <i class="icon-wallet icon"></i><a class="tb-nav-link">$1,500.00</a>                    
+                    <i class="icon-arrow-down icon"></i><a class="tb-nav-link" href="#"></a>
+                </li>
+                <li class="topbar-item bell">
+                    <i class="icon-notification icon"></i><a class="tb-nav-link" href="#"></a>
+                    <span class="orange-dot"></span>
+                </li>
+                <li class="topbar-item">
+                    <i class="icon-profile icon"></i><a class="tb-nav-link link" href="#">Leonardo Dicaprio</a>
+                </li>
+                <li class="topbar-item">
+                    <i class="icon-quit icon"></i><a class="tb-nav-link" href="#"></a>
+                </li>
+            </ul>
+    </div>
+        
+    <div class="main-container">
+        <div class="general-container">
                     <div class="title">
                         <h3 class="container-title">GENERAL STATISTICS</h3>
                     </div>
@@ -111,14 +113,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container-wrapper">
-                        <div class="chart">
-                            <img class="chart-img" src="images/chart.png" alt="">
-                        </div>
+                    <div class="chart-container">
+                        <img class="chart-img" src="images/chart.png" alt="">                        
                     </div>             
-                </div>
-
-                <div class="links-container">
+        </div>
+        <div class="links-container">
                     <div class="title">
                         <h3 class="container-title">LINKS</h3>
                     </div>
@@ -194,12 +193,9 @@
                             <button class="btn">+ add new</button>
                         </div>
                     </div>         
-                </div>
-
-            </div>
-        </div>
-
+        </div>            
     </div>
-
+    
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>
