@@ -17,45 +17,22 @@
     <div id="sidebar" class="sidebar-container">
         <div class="header-container">
             <h2 class="logo">Just do it</h2>
-            <button id="btnHamburger" href="#" class="burger-btn btn"><i class="fas fa-bars"></i></button>
+            <button id="btnHamburger" class="burger-btn btn"><i class="fas fa-bars"></i></button>
         </div>
-        <ul class="sidebar-menu">
-            <li>
-                <i class="icon-general icon"></i><a class="sb-nav-link">General</a>
-            </li>
-            <li>
-                <i class="icon-details icon"></i><a class="sb-nav-link">Details</a>
-            </li>
-            <li>
-                <i class="icon-links icon"></i><a class="sb-nav-link">Links</a>
-            </li>
-            <li>
-                <i class="icon-banners icon"></i><a class="sb-nav-link">Banners</a>
-            </li>
-            <li>
-                <i class="icon-personaldata icon"></i><a class="sb-nav-link">Personal data</a>
-            </li>
-            <li>
-                <i class="icon-payout icon"></i><a class="sb-nav-link">Payout</a>
-            </li>
-            <li>
-                <i class="icon-postback icon"></i><a class="sb-nav-link">Postback</a>
-            </li>
-            <li class="topbar-item">
-                <i class="icon-wallet icon"></i><a class="tb-nav-link">$1,500.00</a>                    
-                <i class="icon-arrow-down icon"></i><a class="tb-nav-link" href="#"></a>
-            </li>
-            <li class="topbar-item bell">
-                <i class="icon-notification icon"></i><a class="tb-nav-link" href="#"></a>
-                <span class="orange-dot"></span>
-            </li>
-            <li class="topbar-item">
-                <i class="icon-profile icon"></i><a class="tb-nav-link link" href="#">Leonardo Dicaprio</a>
-            </li>
-            <li class="topbar-item">
-                <i class="icon-quit icon"></i><a class="tb-nav-link" href="#"></a>
-            </li>
-        </ul>
+        <div class="sidebar-menu">
+            <a class="sb-nav-link" href="#general"><i class="icon-general icon"></i>General</a>
+            <a class="sb-nav-link" href="#detail"><i class="icon-details icon"></i>Details</a>
+            <a class="sb-nav-link" href="#links"><i class="icon-links icon"></i>Links</a>
+            <a class="sb-nav-link" href="#banners"><i class="icon-banners icon"></i>Banners</a>
+            <a class="sb-nav-link" href="#personalData"><i class="icon-personaldata icon"></i>Personal data</a>
+            <a class="sb-nav-link" href="#payout"><i class="icon-payout icon"></i>Payout</a>
+            <a class="sb-nav-link"><i class="icon-postback icon"></i>Postback</a>
+            <a class="sb-nav-link tb-nav-link"><i class="icon-wallet icon "></i>$1,500.00<i class="icon-arrow-down icon"></i></a>
+            <a class="sb-nav-link tb-nav-link" href="#"><i class="icon-notification icon"></i></a>
+            <span class="orange-dot"></span>
+            <a class="sb-nav-link tb-nav-link link" href="#"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
+            <a class="sb-nav-link tb-nav-link" href="#"><i class="icon-quit icon"></i></a>
+        </div>
             
         <div class="manager-container">
             <h3>YOUR MANAGER</h3>
@@ -87,124 +64,301 @@
     </div>
         
     <div class="main-container">
-        <div class="general-container">
-                    <div class="title">
-                        <h3 class="container-title">GENERAL STATISTICS</h3>
+
+        <div class="box general-container" id="general">
+            <div class="title-container">
+                <h3 class="title">GENERAL STATISTICS</h3>
+            </div>
+            <div class="general-date-picker">
+                <div class="date-picker">
+                    <form class="date-picker-form">
+                        <input type="date" name="date" class="date date-from">
+                        <input type="date" name="date" class="date date-to"><i class="icon-calendar icon"></i>
+                    </form>
+                </div>
+                <div class="btn-date-picker">
+                    <button class="btn btn-refresh"><i class="icon-refresh icon"></i></button>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat-left stat-box">
+                    <div class="stat-details">
+                        <p class="stat-title">Visit Signups</p>
+                        <p class="value">124</p>
                     </div>
-                    <div class="general-date-picker">
-                        <div class="date-picker">
-                            <form class="date-picker-form">
-                                <input type="date" name="date" class="date-from">
-                                <input type="date" name="date" class="date-to"><i class="icon-calendar icon"></i>
-                            </form>
-                        </div>
-                        <div class="btn-date-picker">
-                            <button class="btn btn-refresh"><i class="icon-refresh"></i></button>
-                        </div>
+                    <div class="stat-details">
+                        <p class="stat-title">FTD</p>
+                        <p class="value">445</p>
                     </div>
-                    <div class="stats">
-                        <div class="stat-left stat-box">
-                            <div class="stat-details">
-                              <p class="stat-title">Visit Signups</p>
-                              <p class="value">124</p>
-                            </div>
-                            <div class="stat-details">
-                              <p class="stat-title">FTD</p>
-                              <p class="value">445</p>
-                            </div>
-                        </div>
-                        <div class="stat-right stat-box">
-                            <div class="stat-details">
-                              <p class="stat-title">Net Deposit</p>
-                              <p class="value">564</p>
-                            </div>
-                            <div class="stat-details">
-                              <p class="stat-title">Turn over</p>
-                              <p class="value">432</p>
-                            </div>
-                        </div>
+                </div>
+
+                <div class="stat-right stat-box">
+                    <div class="stat-details">
+                        <p class="stat-title">Net Deposit</p>
+                        <p class="value">564</p>
                     </div>
-                    <div class="chart-container">
-                        <img class="chart-img" src="images/chart.png" alt="">                        
-                    </div>             
+                    <div class="stat-details">
+                        <p class="stat-title">Turn over</p>
+                        <p class="value">432</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-wrapper">
+                    <table>
+                        <div class="chart-container">
+                            <img class="chart-img" src="images/chart.png" alt="">                        
+                        </div>
+                    </table>
+            </div>             
         </div>
-        <div class="links-container">
-                    <div class="title">
-                        <h3 class="container-title">LINKS</h3>
+
+        <div class="box links-container" id="links">
+            <div class="title-container">
+                <h3 class="title">LINKS</h3>
+            </div>
+            <div class="links-table">
+                <div class="btn-middle">
+                    <button class="btn">+ add new</button>
+                </div>
+                <div class="links-list">
+                    <ul>
+                        <li class="link-item">
+                            <p class="stat-title">Home page</p>
+                            <a class="link" href="#">http://www.homepage.com</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Currently offer</p>
+                            <a class="link" href="#">http://www.currently.com</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Bulprix</p>
+                            <a class="link" href="#">http://www.bulprix.com</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Your Site</p>
+                            <a class="link" href="#">http://www.yoursite.com</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Google</p>
+                            <a class="link" href="#">http://www.google.com</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Facebook</p>
+                            <a class="link" href="#">http://www.facebook.com</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Dashboard</p>
+                            <a class="link" href="#">http://www.dashboard.com</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Blurax</p>
+                            <a class="link" href="#">http://www.blurax.com</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Piece of wine</p>
+                            <a class="link" href="#">http://www.pieceofwine.com</a>                                    
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>                                    
+                        </li>
+                        <li class="link-item last-link">
+                            <p class="stat-title">Twitter</p>
+                            <a class="link" href="#">http://www.twitter.com</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-middle">
+                    <button class="btn">+ add new</button>
+                </div>
+            </div>         
+        </div> 
+
+        <div class="box banners-container" id="banners">
+            <div class="title-container">
+                <h3 class="title">BANNERS</h3>
+            </div>
+            <div class="links-table">
+                <div class="btn-middle">
+                    <button class="btn">+ add new</button>
+                </div>
+                <div class="links-list">
+                    <ul>
+                        <li class="link-item">
+                            <p class="stat-title">Banner main</p>
+                            <a class="link" href="#">http://www.website.com/bannermain.gif</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Signup banner</p>
+                            <a class="link" href="#">http://www.website.com/signup.gif</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Banner left site</p>
+                            <a class="link" href="#">http://www.website.com/leftsite.gif</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Vertical banner</p>
+                            <a class="link" href="#">http://www.website.com/vert.gif</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item">
+                            <p class="stat-title">Front banner</p>
+                            <a class="link" href="#">http://www.website.com/front.gif</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>
+                        <li class="link-item last-link">
+                            <p class="stat-title">Horizontal banner</p>
+                            <a class="link" href="#">http://www.website.com/horizontal.gif</a>
+                            <div class="link-icons">
+                                <i class="icon-links icon"></i>
+                                <i class="icon-trash icon"></i>
+                            </div>
+                        </li>                        
+                    </ul>
+                </div>
+                <div class="btn-middle">
+                    <button class="btn">+ add new</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="box personal-data-container" id="personalData">
+            <div class="title-container">
+                <h3 class="title">PERSONAL DATA</h3>
+            </div>
+            <div class="form-box">
+                <form>
+                    <div class="form">
+                        <p class="label">Name</p>
+                        <input type="text" name="name" required>
                     </div>
-                    <div class="links-table">
-                        <div class="btn-add-new">
-                            <button class="btn">+ add new</button>
-                        </div>
-                        <div class="links-list">
-                            <ul>
-                                <li class="link-item">
-                                    <p class="stat-title">Home page</p>
-                                    <a class="link" href="#">http://www.homepage.com</a>
-                                    <i class="icon-links icon"></i>
-                                    <i class="icon-trash icon"></i>
-                                </li>
-                                <li class="link-item">
-                                    <p class="stat-title">Currently offer</p>
-                                    <a class="link" href="#">http://www.currently.com</a>
-                                    <i class="icon-links icon"></i>
-                                    <i class="icon-trash icon"></i>
-                                </li>
-                                <li class="link-item">
-                                    <p class="stat-title">Bulprix</p>
-                                    <a class="link" href="#">http://www.bulprix.com</a>
-                                    <i class="icon-links icon"></i>
-                                    <i class="icon-trash icon"></i>
-                                </li>
-                                <li class="link-item">
-                                    <p class="stat-title">Your Site</p>
-                                    <a class="link" href="#">http://www.yoursite.com</a>
-                                    <i class="icon-links icon"></i>
-                                    <i class="icon-trash icon"></i>
-                                </li>
-                                <li class="link-item">
-                                    <p class="stat-title">Google</p>
-                                    <a class="link" href="#">http://www.google.com</a>
-                                    <i class="icon-links icon"></i>
-                                    <i class="icon-trash icon"></i>
-                                </li>
-                                <li class="link-item">
-                                    <p class="stat-title">Facebook</p>
-                                    <a class="link" href="#">http://www.facebook.com</a>
-                                    <i class="icon-links icon"></i>
-                                    <i class="icon-trash icon"></i>
-                                </li>
-                                <li class="link-item">
-                                    <p class="stat-title">Dashboard</p>
-                                    <a class="link" href="#">http://www.dashboard.com</a>
-                                    <i class="icon-links icon"></i>
-                                    <i class="icon-trash icon"></i>
-                                </li>
-                                <li class="link-item">
-                                    <p class="stat-title">Blurax</p>
-                                    <a class="link" href="#">http://www.blurax.com</a>
-                                    <i class="icon-links icon"></i>
-                                    <i class="icon-trash icon"></i>
-                                </li>
-                                <li class="link-item">
-                                    <p class="stat-title">Piece of wine</p>
-                                    <a class="link" href="#">http://www.pieceofwine.com</a>                                    
-                                    <i class="icon-links icon"></i>
-                                    <i class="icon-trash icon"></i>                                    
-                                </li>
-                                <li class="link-item last-link">
-                                    <p class="stat-title">Twitter</p>
-                                    <a class="link" href="#">http://www.twitter.com</a>
-                                    <i class="icon-links icon"></i>
-                                    <i class="icon-trash icon"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="btn-add-new">
-                            <button class="btn">+ add new</button>
-                        </div>
-                    </div>         
-        </div>            
+                    <div class="form">
+                        <p class="label">Surname</p>
+                        <input type="text" name="surname" required>
+                    </div>
+                    <div class="form">
+                        <p class="label">E-mail</p>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form">
+                        <p class="label">Phone number</p>
+                        <input type="number" name="phone-number" required>
+                    </div>
+                </form>
+            </div>
+            <div class="form-box">
+                <form>
+                    <div class="form">
+                        <p class="label">Skype</p>
+                        <input type="text" name="skype" required>
+                    </div>
+                    <div class="form">
+                        <p class="label">ICQ</p>
+                        <input type="text" name="icq" required>
+                    </div>
+                    <div class="form">
+                        <p class="label">Msn</p>
+                        <input type="text" name="msn" required>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="form-box">
+                <form>
+                    <div class="form">
+                        <p class="label">Wallet</p>
+                        <input type="text" name="wallet" required>
+                    </div>                    
+                </form>
+            </div>
+            <div class="form-box">
+                <form>
+                    <div class="form">
+                        <p class="label">Password</p>
+                        <input type="text" name="password" required>
+                    </div>
+                    <div class="form">
+                        <p class="label">Repeat</p>
+                        <input type="text" name="repeat" required>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="btn-middle">
+                <button class="btn">Save</button>
+            </div>
+
+        </div>
+
+        <div class="box detail-container" id="detail">
+            <div class="title-container">
+                <h3 class="title">DETAIL STATISTIC</h3>
+            </div>
+
+        </div>
+        
+        <div class="box payout-history-container" id="payout">
+            <div class="title-container">
+                <h3 class="title">PAYOUT HISTORY</h3>
+            </div>
+
+        </div>
+
     </div>
     
     <script src="js/script.js" type="module"></script>

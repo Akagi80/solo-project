@@ -4,14 +4,49 @@
   width: 100%;
   padding: 15px 15px 15px 250px;
 
-  .general-container, .links-container {
+  .box {
+    background-color: $main-color;
+    margin-top: 20px;
+  }
+
+  .general-container {
     background-color: $main-color;
     margin-top: 60px;
   }
+}
 
-  .links-container {
-    background-color: $main-color;
+.title-container {
+  border-bottom: solid $main-text-color 1px;
+
+  .title {
+    margin-left: 10px;
+  }
+}
+
+.form-box {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid $main-text-color 1px;
+  
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    margin-bottom: 20px;
+    width: 450px;
+
+    .label {
+      width: 40%;
+    }
+
+    input {
+      width: 60%;
+      height: 30px;
+    }
   }
 }
 
@@ -45,6 +80,7 @@
   justify-content: center;
   margin: 20px auto;
   padding: 20px 0;
+  min-width: 500px;
 
   img {
     height: auto;
@@ -53,17 +89,21 @@
   }
 }
 
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
+}
+
 .links-table {
   display: flex;
   flex-direction: column;
-  border-top: solid $main-text-color 1px;
   padding: 0 20%;
-    
-  .btn-add-new {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-  }
   
   .link-item {
     display: flex;
@@ -86,9 +126,16 @@
       width: 50%;
     }
       
-    .icon {
-      width: 5%;
-      display: none;
+    .link-icons {
+      display: flex;
+      flex-direction: row;
+      width: 10%;
+
+      .icon {
+        display: flex;
+        margin-right: 10px;
+        display: none;
+      }
     }
       
     &:hover {
@@ -99,12 +146,23 @@
         display: inherit;  
       }
     }
+
+    .link-icons {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   .last-link {
     border-bottom: solid $main-text-color 1px;
   }
 }
+
+.banners-container .links-table {
+  padding: 0 10%;
+}
+
+/* MEDIA */
 
 @media (max-width: 991px) {
   .stats {
@@ -119,10 +177,10 @@
 
 @media (max-width: 767px) {
   .main-container {
-    padding: 2%;
+    padding: 1%;
 
-    .general-date-picker {
-      padding: 10px 0;
+    .general-container {
+      margin-top: 0;
     }
 
     .links-table {
@@ -131,3 +189,55 @@
   }
 }
 
+@media (max-width: 425px) {
+  .main-container {
+    .box {
+      margin-top: 10px;
+    }
+
+    .form-box {
+      padding-bottom: 15px;
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 250px;
+  
+        .label {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+  
+        input {
+          width: 200px;
+        }
+      }
+
+    }
+
+    .general-container {
+      margin-top: 50px;
+
+      .btn-date-picker {
+        display: flex;
+        align-items: center;
+      }
+
+      .stats {
+        flex-direction: column;
+
+        .stat-box {
+          margin: 0 7%;
+          width: 84%;
+        }
+
+        .stat-details {
+          margin: 0;  
+        }
+      }
+    }
+  }
+}

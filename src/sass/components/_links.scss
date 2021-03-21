@@ -7,4 +7,43 @@
     color: $btn-color;
   }
 }
+
+/* MEDIA */
   
+@media (max-width: 425px) {
+  .links-list {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    ul {
+      width: 90%;
+
+      .link-item {
+        flex-direction: column;
+
+        .stat-title {
+          margin-left: 0;
+          width: 100%;
+        }
+
+        .link {
+          padding-top: 10px;
+          width: 100%;
+          display: none;
+          justify-content: center;
+        }
+    
+        &:hover .link {
+          display: inherit; 
+        }
+        
+        .link-icons {
+          padding-top: 10px;
+          justify-content: space-around;
+          width: 100%;  
+        }        
+      }
+    }
+  }
+}

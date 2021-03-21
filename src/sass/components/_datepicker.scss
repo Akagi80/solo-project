@@ -3,33 +3,80 @@
   justify-content: center;
   text-align: center;
   padding: 40px;
-  border-top: solid $main-text-color 1px;
     
   .date-picker {
     padding: 3px 0 2px 0;
     border: 1px $main-text-color solid;
     margin: 10px;
-    
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      display: none;
-    }
-    
-    input {
+
+    .date {
       background: none;
       border: none;
-      width: 130px;
+      width: 150px;
       height: 35px;
       margin: 0;
       outline: 0;
       padding-left: 10px;
-    }    
-    
+    } 
+
     .date-to {
       border-left: solid $main-text-color 1px;
     }
 
+    /*    
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+    } 
+
     .icon {
       margin-right: 10px;
     }
+    */
+
+    .icon {
+      display: none;
+    }
+  }
+  
+  .btn-date-picker .btn-refresh i {
+    margin-right: 0;
+  }
+}
+
+/* MEDIA */
+
+@media (max-width: 767px) {
+  .general-date-picker {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .general-date-picker .date-picker-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .date {
+      width: 100%;
+    }
+    
+    .date-to {
+      border-left: none;
+    }
+    /*
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      display: inherit;
+    }
+
+    input {
+      border: solid $main-text-color 1px;
+    }
+
+    .icon {
+      display: none;
+    }
+    */  
   }
 }

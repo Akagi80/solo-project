@@ -1,4 +1,5 @@
 .icon {
+  margin-right: 10px;
   font-size: 17px;
   transition: $transition;
   
@@ -7,7 +8,11 @@
     cursor: pointer;
   }
 }
-  
-.icon-refresh {
-  font-size: 17px;
+
+/* MEDIA */
+
+@media (max-width: 425px) {
+  .links-table .link-item .link-icons .icon {
+    font-size: 24px;   
+  }
 }
