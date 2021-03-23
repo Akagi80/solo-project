@@ -1,0 +1,29 @@
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 20px 0;
+  min-width: 500px;
+  
+  img {
+    height: auto;
+    max-width: 100%;
+    display: block;      
+  }
+}
+
+@media (max-width: 425px) {  
+  .general-container .stats {
+    flex-direction: column;
+      
+    .stat-box {
+      margin: 0 7%;
+      width: 84%;
+    }
+      
+    .stat-details {
+      margin: 0;  
+    }
+  }
+}  

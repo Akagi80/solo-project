@@ -4,3 +4,55 @@ body {
   color: $main-text-color;
   font-family: $text-font;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 15px 15px 245px;
+
+  .box {
+    background-color: $main-color;
+    margin-top: 60px;
+    display: none;
+  }
+  
+  .box.active {
+    display: block;
+  }
+}
+
+.title-container {
+  border-bottom: solid $main-text-color 1px;
+}
+
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* MEDIA */
+
+@media (max-width: 767px) {
+  .main-container {
+    padding: 1%;
+
+    .box {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .main-container {
+    .box {
+      margin-top: 50px;
+    }
+  }
+}

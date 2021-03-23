@@ -1,9 +1,9 @@
+// finde sidebar menu
+const sidebarMenu = document.getElementById('sidebar');
+
 function burgerAcordion() {
   // finde burger btn 
   const btnHamburger = document.querySelector('#btnHamburger');
-
-  // finde sidebar menu
-  const sidebarMenu = document.getElementById('sidebar');
 
   // [WORK IN PROGRESS]  const overlay = document.querySelector('#overlay');
   
@@ -34,3 +34,33 @@ function burgerAcordion() {
 
 burgerAcordion();
 
+
+
+function activeSubpage(event) {
+  event.preventDefault();
+  const clickedElement = this,
+        activePageLinks = document.querySelectorAll('.sb-nav-link'),
+        activePages = document.querySelectorAll('.box'),
+        pageSelect = clickedElement.getAttribute('href'),
+        clickedLink = document.querySelector(pageSelect);
+
+  for(let activePageLink of activePageLinks) {
+    activePageLink.classList.remove('active');
+  }
+
+  clickedElement.classList.add('active');
+
+  for(let activePage of activePages) {
+    activePage.classList.remove('active');
+  }
+  
+  clickedLink.classList.add('active');
+
+  sidebarMenu.classList.remove('open');
+}
+
+const links = document.querySelectorAll('.sb-nav-link');
+
+for(let link of links) {
+  link.addEventListener('click', activeSubpage)
+}
