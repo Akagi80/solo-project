@@ -100,10 +100,42 @@ function openModal(modal) {
   document.querySelector(modal).classList.add('show')
 }
 
-document.querySelector('.login').addEventListener('click', function(e) {
+// topbar login
+document.querySelector('#login').addEventListener('click', function(e) {
+  if(e.target === this) {
+    openModal('#myModalLogin');
+  }
+});
+
+// hamburger - sidebar login
+document.querySelector('#login-2').addEventListener('click', function(e) {
   if(e.target === this) {
     openModal('#myModalLogin');
   }
   sidebarMenu.classList.remove('open');
 });
 
+// online chat
+document.querySelector('#message').addEventListener('click', function(e) {
+  if(e.target === this) {
+    openModal('#myModalMessage');
+  }
+  sidebarMenu.classList.remove('open');
+});
+
+
+
+// topbar quit
+document.querySelector('#quit').addEventListener('click', function(e) {
+  if(e.target === this) {
+    openModal('#myModalQuit');
+  }
+});
+
+// hamburger - sidebar quit
+document.querySelector('#quit-2').addEventListener('click', function(e) {
+  if(e.target === this) {
+    openModal('#myModalQuit');
+  }
+  sidebarMenu.classList.remove('open');
+});

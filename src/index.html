@@ -15,7 +15,7 @@
     <div class="overlay" id="overlay">
 
         <div class="modal" id="myModalLogin">
-            <div class="btn-close js--close-modal">x</div>
+            <div class="btn-close js--close-modal btn">x</div>
             <form action="" method="POST">
                 <div class="title-container">
                     <h3 class="title">Login</h3>
@@ -36,7 +36,19 @@
             </form>            
         </div>
 
-        <div class="modal" id="myModalManager">
+        <div class="modal" id="myModalMessage">
+            <div class="btn-close js--close-modal btn">x</div>
+            <div class="title-container">
+                <h3 class="title">ONLINE CHAT WITH YOU PERSONAL MANAGER</h3>
+            </div>
+
+
+        </div>
+
+        <div class="modal" id="myModalQuit">
+            <div class="title-container">
+                <h3 class="title">Do you realy want Quit?</h3>
+            </div>
 
         </div>
     </div>
@@ -57,8 +69,8 @@
             <a class="sb-nav-link tb-nav-link"><i class="icon-wallet icon "></i>$1,500.00<i class="icon-arrow-down icon"></i></a>
             <a class="sb-nav-link tb-nav-link" href="#"><i class="icon-notification icon"></i></a>
             <span class="orange-dot"></span>
-            <a class="sb-nav-link tb-nav-link link" href="#"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
-            <a class="sb-nav-link tb-nav-link" href="#"><i class="icon-quit icon"></i></a>
+            <a class="sb-nav-link tb-nav-link link" id="login-2" href="#"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
+            <a class="sb-nav-link tb-nav-link" href="#"><i class="icon-quit icon" id="quit-2"></i></a>
         </div>
             
         <div class="manager-container">
@@ -66,7 +78,7 @@
             <div class="manager-list">
                 <img class="manager-img" src="images/manager-1.jpg" alt="">
                 <span class="green-dot"></span>
-                <a class="manager-name">Mikhael E.</a>
+                <a class="manager-name" id="message">Mikhael E.</a>
             </div>
         </div>
     </div>
@@ -82,10 +94,10 @@
                     <span class="orange-dot"></span>
                 </li>
                 <li class="topbar-item">
-                    <a class="tb-nav-link link login" href="#"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
+                    <a class="tb-nav-link link" id="login" href="#"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
                 </li>
                 <li class="topbar-item">
-                    <a class="tb-nav-link" href="#"><i class="icon-quit icon"></i></a>
+                    <a class="tb-nav-link" href="#"><i class="icon-quit icon" id="quit"></i></a>
                 </li>
             </ul>
     </div>
