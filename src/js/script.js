@@ -99,3 +99,11 @@ function openModal(modal) {
   document.querySelector('#overlay').classList.add('show')
   document.querySelector(modal).classList.add('show')
 }
+
+document.querySelector('.login').addEventListener('click', function(e) {
+  if(e.target === this) {
+    openModal('#myModalLogin');
+  }
+  sidebarMenu.classList.remove('open');
+});
+

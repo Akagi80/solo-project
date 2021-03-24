@@ -13,14 +13,32 @@
 </head>
 <body>
     <div class="overlay" id="overlay">
-        <div class="modal" id="myModal">
+
+        <div class="modal" id="myModalLogin">
             <div class="btn-close js--close-modal">x</div>
-        
-            <h4>Witaj w modalu!</h4>
-            <p>Lorem ipsum dolor sit amet...</p>
-        
-            <button class="js--close-modal">Okay</button>
-          </div>
+            <form action="" method="POST">
+                <div class="title-container">
+                    <h3 class="title">Login</h3>
+                </div>
+                <div class="form-box">
+                    <div class="form form-item">
+                        <i class="icon-login icon"></i>
+                        <input type="text" name="text" minlength=5 placeholder="login name" required>
+                    </div>
+                    <div class="form form-item">
+                        <i class="icon-password icon"></i>
+                        <input type="password" name="password" minlength=5 placeholder="password" required>
+                    </div>
+                    <div class="btn-middle">
+                        <button class="btn" type="submit">Enter</button>
+                    </div>                
+                </div>
+            </form>            
+        </div>
+
+        <div class="modal" id="myModalManager">
+
+        </div>
     </div>
          
     <div id="sidebar" class="sidebar-container">
@@ -56,18 +74,18 @@
     <div class="topbar">
             <ul class="topbar-menu">
                 <li class="topbar-item">
-                    <i class="icon-wallet icon"></i><a class="tb-nav-link">$1,500.00</a>                    
-                    <i class="icon-arrow-down icon"></i><a class="tb-nav-link" href="#"></a>
+                    <a class="tb-nav-link"><i class="icon-wallet icon"></i>$1,500.00</a>                    
+                    <a class="tb-nav-link" href="#"><i class="icon-arrow-down icon"></i></a>
                 </li>
                 <li class="topbar-item bell">
-                    <i class="icon-notification icon"></i><a class="tb-nav-link" href="#"></a>
+                    <a class="tb-nav-link" href="#"><i class="icon-notification icon"></i></a>
                     <span class="orange-dot"></span>
                 </li>
                 <li class="topbar-item">
-                    <i class="icon-profile icon"></i><a class="tb-nav-link link" href="#">Leonardo Dicaprio</a>
+                    <a class="tb-nav-link link login" href="#"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
                 </li>
                 <li class="topbar-item">
-                    <i class="icon-quit icon"></i><a class="tb-nav-link" href="#"></a>
+                    <a class="tb-nav-link" href="#"><i class="icon-quit icon"></i></a>
                 </li>
             </ul>
     </div>
