@@ -1,5 +1,4 @@
 // Main + Login 
-
 .overlay {
   position: fixed;
   top: 0;
@@ -89,6 +88,10 @@
       border-radius: 5px;
       width: 90%;
 
+      .icon-message {
+        margin: 10px;
+      }
+
       textarea {
         width: 100%;
         border: none;
@@ -138,5 +141,9 @@
         flex-direction: row;
       }
     }
+  }
+  
+  .modal-quit {
+    width: 250px;
   }
 }

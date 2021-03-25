@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="overlay" id="overlay">
 
+    <!--Modals-->
+    <div class="overlay" id="overlay">
         <div class="modal modal-login" id="myModalLogin">
             <div class="btn-close js--close-modal btn">x</div>
             <form action="" method="POST">
@@ -67,13 +68,14 @@
                 <h3 class="title">Do you realy want Quit?</h3>
             </div>
             <div class="btn-quit">
-                <button class="btn btn-cancel" type="submit">Cancel</button>               
-                <button class="btn" type="submit">Quit</button> 
+                <button class="btn btn-cancel js--close-modal" type="submit">Cancel</button>               
+                <button class="btn js--close-modal" type="submit">Quit</button> 
             </div>
 
         </div>
     </div>
          
+    <!--Sidebar-->
     <div id="sidebar" class="sidebar-container">
         <div class="header-container">
             <h2 class="logo">Just do it</h2>
@@ -104,6 +106,7 @@
         </div>
     </div>
 
+    <!--Topbar-->
     <div class="topbar">
             <ul class="topbar-menu">
                 <li class="topbar-item">
@@ -125,10 +128,12 @@
         
     <div class="main-container">
 
+        <!--General-->
         <div class="box general-container active" id="general">
             <div class="title-container">
                 <h3 class="title">GENERAL STATISTICS</h3>
             </div>
+
             <div class="general-date-picker">
                 <div class="date-picker">
                     <form class="date-picker-form">
@@ -141,6 +146,7 @@
                     <button class="btn btn-refresh"><i class="icon-refresh icon"></i></button>
                 </div>
             </div>
+
             <div class="stats">
                 <div class="stat-left stat-box">
                     <div class="stat-details">
@@ -164,15 +170,19 @@
                     </div>
                 </div>
             </div>
+
             <div class="scroll-wrapper">
                 <table>
                     <div class="chart-container">
-                        <img class="chart-img" src="images/chart.png" alt="">                        
-                    </div>
+                        <canvas id="myChart"></canvas>
+                    </div> 
                 </table>
-            </div>             
+            </div>   
+
+                        
         </div>
 
+        <!--Links-->
         <div class="box links-container" id="links">
             <div class="title-container">
                 <h3 class="title">LINKS</h3>
@@ -271,6 +281,7 @@
             </div>         
         </div> 
 
+        <!--Banners-->
         <div class="box banners-container" id="banners">
             <div class="title-container">
                 <h3 class="title">BANNERS</h3>
@@ -338,6 +349,7 @@
 
         </div>
 
+        <!--Data-->
         <div class="box personal-data-container" id="personalData">
             <div class="title-container">
                 <h3 class="title">PERSONAL DATA</h3>
@@ -401,6 +413,7 @@
             </form>
         </div>
 
+        <!--Detail-->
         <div class="box detail-container" id="detail">
             <div class="title-container">
                 <h3 class="title">DETAIL STATISTIC</h3>
@@ -418,6 +431,7 @@
             </div>
         </div>
         
+        <!--Payout-->
         <div class="box payout-history-container" id="payout">
             <div class="title-container">
                 <h3 class="title">PAYOUT HISTORY</h3>
@@ -427,6 +441,7 @@
 
     </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script src="js/script.js" type="module"></script>
 </body>
 </html>

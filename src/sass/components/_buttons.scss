@@ -1,5 +1,5 @@
 .btn {
-  min-width: 120px;
+  width: 120px;
   background-color: $btn-color;
   border: none;
   border-radius: 5px;
@@ -17,7 +17,7 @@
 }
 
 .btn-refresh, .burger-btn, .btn-close {
-  min-width: auto;
+  width: auto;
 }
 
 .btn-middle {

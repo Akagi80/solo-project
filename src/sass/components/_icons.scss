@@ -10,6 +10,14 @@
   }
 }
 
+.icon-refresh {
+  color: $main-color;
+  
+  &:hover {
+    color: $main-color;
+  }
+}
+
 /* MEDIA */
 
 @media (max-width: 425px) {
