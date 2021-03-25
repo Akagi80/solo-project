@@ -1,14 +1,9 @@
 // Burger menu
 
-// finde sidebar menu
-const sidebarMenu = document.getElementById('sidebar');
+const sidebarMenu = document.getElementById('sidebar'); // finde sidebar menu
 
 function burgerAcordion() {
-  // finde burger btn 
-  const btnHamburger = document.querySelector('#btnHamburger');
-
-  // [WORK IN PROGRESS]  const overlay = document.querySelector('#overlay');
-  
+  const btnHamburger = document.querySelector('#btnHamburger');  // finde burger btn 
 
   // add listener on burger btn
   btnHamburger.addEventListener('click', function(){
@@ -17,18 +12,10 @@ function burgerAcordion() {
     // remove or add 'open' class to sidebar 
     if(sidebarMenu.classList.contains('open')){ //Close
       sidebarMenu.classList.remove('open');
-
-        // [WORK IN PROGRESS]        
-        //overlay.classList.remove('fade-in'); 
-        //overlay.classList.add('fade-out');
         
     }
     else { // Open
       sidebarMenu.classList.add('open');
-        
-        // [WORK IN PROGRESS]
-        //overlay.classList.remove('fade-out');
-        //overlay.classList.add('fade-in');
         
     }
   });
@@ -122,8 +109,6 @@ document.querySelector('#message').addEventListener('click', function(e) {
   }
   sidebarMenu.classList.remove('open');
 });
-
-
 
 // topbar quit
 document.querySelector('#quit').addEventListener('click', function(e) {

@@ -56,59 +56,9 @@
     }
   }
   
-  .manager-container {
-    padding: 0 30px;
-    margin-bottom: 10px;
-    font-size: 15px;
+  .manager-container { 
     border-top: solid $main-text-color 1px;
-  
-    .manager-list {
-      display: flex;
-      margin: auto;
-      align-items: center;
-      position: relative;
- 
-      .manager-img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-      }
-
-      .green-dot {
-        position: absolute;
-        height: 12px;
-        width: 12px;
-        border-radius: 50%;
-        background-color: $online-color;
-        top: 1px;
-        left: 30px;
-      }
-  
-      .manager-name {
-        margin-left: 10px;
-        color: $option-text-color;
-      }
-    }
   }
-  /* [WORK IN PROGRESS]
-  .overlay {
-    visibility: hidden;
-    position: fixed;
-    top: 60px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: $option-text-color;
-    opacity: 50%;
-  }
-
-  // hamburger 'open' style
-  &.open {
-    .overlay {
-      visibility: visible;
-    }
-  }
-  */
 }
 
 @media (max-width: 767px) {

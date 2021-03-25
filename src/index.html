@@ -14,7 +14,7 @@
 <body>
     <div class="overlay" id="overlay">
 
-        <div class="modal" id="myModalLogin">
+        <div class="modal modal-login" id="myModalLogin">
             <div class="btn-close js--close-modal btn">x</div>
             <form action="" method="POST">
                 <div class="title-container">
@@ -36,18 +36,39 @@
             </form>            
         </div>
 
-        <div class="modal" id="myModalMessage">
+        <div class="modal modal-message" id="myModalMessage">
             <div class="btn-close js--close-modal btn">x</div>
             <div class="title-container">
                 <h3 class="title">ONLINE CHAT WITH YOU PERSONAL MANAGER</h3>
+            </div>            
+            <div class="manager-container">
+                <div class="manager-list">
+                    <img class="manager-img" src="images/manager-1.jpg" alt="">
+                    <span class="green-dot"></span>
+                    <a class="manager-name">Mikhael E.</a>
+                </div>
             </div>
+            <div class="box conversation-box">
 
-
+            </div>
+            <div class="form-box">
+                <div class="form message-item">
+                    <i class="icon-message icon"></i>
+                    <textarea name="message" placeholder="Enter the message.." cols="30" rows="2" maxlength="1000" required></textarea>
+                </div>
+                <div class="btn-middle">
+                    <button class="btn" type="submit">Send</button>
+                </div> 
+            </div>
         </div>
 
-        <div class="modal" id="myModalQuit">
+        <div class="modal modal-quit" id="myModalQuit">
             <div class="title-container">
                 <h3 class="title">Do you realy want Quit?</h3>
+            </div>
+            <div class="btn-quit">
+                <button class="btn btn-cancel" type="submit">Cancel</button>               
+                <button class="btn" type="submit">Quit</button> 
             </div>
 
         </div>
