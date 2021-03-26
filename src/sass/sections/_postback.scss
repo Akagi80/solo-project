@@ -1,0 +1,95 @@
+.postback-container {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-weight: 600;
+
+    span {
+      color: $span-color;
+    }
+  }
+
+  .subtitle {
+    color: $sidebar-color;
+    font-weight: 400;
+    margin-left: 10px;
+    padding-top: 20px;
+  }
+
+  .postback-box {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+
+    .inside-box {
+      width: 100%;
+      margin: 5px;
+
+      .info-box {
+        min-height: 200px;
+        border: 2px solid $background-color;
+        border-radius: 5px;
+      }
+
+      .select-box {
+        width: 100%;
+        border: 2px solid $background-color;
+        border-radius: 5px;
+        min-height: 40px;
+      }
+    }
+  }
+
+  .middle-box {
+    margin: 0;
+    padding: 5px 5px 30px 5px; 
+  }
+
+  .inside-last-box {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid $background-color;
+
+    p {
+      padding-bottom: 10px;
+    }
+  }
+
+  .last-box {
+    margin: 0;
+
+    .inside-box {
+      margin: 0;
+    }
+  }
+}
+
+.type-box {
+  max-height: 150px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+
+  .statueses {
+    input[type=checkbox] {
+      transform: scale(1.5);
+    }
+
+    label {
+      color: $sidebar-color;
+      font-size: 17px;
+      line-height: 2.25;
+      margin-left: 15px;
+    }
+  }
+}
+
+
+select {
+  width: 100%;
+  border: none;
+  outline: none;
+  min-height: 20px;
+  margin: 10px 0;
+}
