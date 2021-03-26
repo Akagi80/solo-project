@@ -130,7 +130,7 @@
     <div class="main-container">
 
         <!--General-->
-        <div class="box general-container" id="general">
+        <div class="box general-container active" id="general">
             <div class="title-container">
                 <h3 class="title">GENERAL STATISTICS</h3>
             </div>
@@ -441,7 +441,7 @@
         </div>
 
         <!--Postback-->
-        <div class="box postback-container active" id="postback">
+        <div class="box postback-container" id="postback">
 
             <div class="title-container">
                 <h3 class="title">NEW POSTBACK</h3>
@@ -536,7 +536,7 @@
                     <div class="inside-last-box">
                         <p>Send after:</p>
                         <div class="type-box">
-                            <input type="range" id="points" name="time-range" min="0" max="168">
+                            <input type="range" min="1" max="168" value="84" class="slider" id="myRange">
                         </div>           
                     </div>             
                 </div>
