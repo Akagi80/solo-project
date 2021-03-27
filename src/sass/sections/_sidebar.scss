@@ -91,9 +91,10 @@
       .icon {
         margin-right: 10px;
       }
-
+      
       .tb-nav-link {
         display: flex;
+        flex-direction: row;
         padding: 10px 0 10px 20px;
         border: none;
       } 

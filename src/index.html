@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/bootstrap-grid.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -77,10 +77,12 @@
          
     <!--Sidebar-->
     <div id="sidebar" class="sidebar-container">
+
         <div class="header-container">
             <h2 class="logo">Just do it</h2>
             <button id="btnHamburger" class="burger-btn btn"><i class="fas fa-bars"></i></button>
         </div>
+        
         <div class="sidebar-menu">
             <a class="sb-nav-link" href="#general"><i class="icon-general icon"></i>General</a>
             <a class="sb-nav-link" href="#detail"><i class="icon-details icon"></i>Details</a>
@@ -97,7 +99,7 @@
         </div>
             
         <div class="manager-container">
-            <h3>YOUR MANAGER</h3>
+            <p class="sub-title">YOUR MANAGER</p>
             <div class="manager-list">
                 <img class="manager-img" src="images/manager-1.jpg" alt="">
                 <span class="green-dot"></span>
@@ -130,7 +132,8 @@
     <div class="main-container">
 
         <!--General-->
-        <div class="box general-container active" id="general">
+        <div class="box general-container" id="general">
+
             <div class="title-container">
                 <h3 class="title">GENERAL STATISTICS</h3>
             </div>
@@ -185,9 +188,11 @@
 
         <!--Links-->
         <div class="box links-container" id="links">
+
             <div class="title-container">
                 <h3 class="title">LINKS</h3>
             </div>
+
             <div class="links-table">
                 <div class="btn-middle">
                     <button class="btn">+ add new</button>
@@ -275,7 +280,7 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </div>                
                 <div class="btn-middle">
                     <button class="btn">+ add new</button>
                 </div>
@@ -284,9 +289,11 @@
 
         <!--Banners-->
         <div class="box banners-container" id="banners">
+
             <div class="title-container">
                 <h3 class="title">BANNERS</h3>
             </div>
+
             <div class="links-table">
                 <div class="btn-middle">
                     <button class="btn">+ add new</button>
@@ -342,7 +349,7 @@
                             </div>
                         </li>                        
                     </ul>
-                </div>
+                </div>                
                 <div class="btn-middle">
                     <button class="btn">+ add new</button>
                 </div>
@@ -352,9 +359,11 @@
 
         <!--Data-->
         <div class="box personal-data-container" id="personalData">
+
             <div class="title-container">
                 <h3 class="title">PERSONAL DATA</h3>
             </div>
+
             <form action="" method="POST">
                 <div class="form-box">
                     <div class="form">
@@ -415,10 +424,12 @@
         </div>
 
         <!--Detail-->
-        <div class="box detail-container" id="detail">
+        <div class="box detail-container active" id="detail">
+
             <div class="title-container">
                 <h3 class="title">DETAIL STATISTIC</h3>
             </div>
+
             <div class="general-date-picker">
                 <div class="date-picker">
                     <form class="date-picker-form">
@@ -430,6 +441,133 @@
                     <button class="btn btn-refresh"><i class="icon-refresh icon"></i></button>
                 </div>
             </div>
+
+            <div class="table-responsive-xl">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Tracker name</th>
+                      <th scope="col">Initiated date</th>
+                      <th scope="col">Visits</th>
+                      <th scope="col">Unique</th>
+                      <th scope="col">Signups</th>
+                      <th scope="col">FTD</th>
+                      <th scope="col">Depositors</th>
+                      <th scope="col">Deposits ($)</th>
+                      <th scope="col">Payout ($)</th>
+                      <th scope="col">Turnover</th>
+                      <th scope="col">Deal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl (200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/leo_test</th>
+                      <td>15/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>29,436.00</td>
+                      <td>941.00</td>
+                      <td>784,435.00</td>
+                      <td>cpl (200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl (200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/leo_test</th>
+                      <td>15/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>29,436.00</td>
+                      <td>941.00</td>
+                      <td>784,435.00</td>
+                      <td>cpl (200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl (200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/leo_test</th>
+                      <td>15/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>29,436.00</td>
+                      <td>941.00</td>
+                      <td>784,435.00</td>
+                      <td>cpl (200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl (200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/leo_test</th>
+                      <td>15/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>29,436.00</td>
+                      <td>941.00</td>
+                      <td>784,435.00</td>
+                      <td>cpl (200)</td>
+                    </tr>
+                  </tbody>
+                  </table>
+              </div>
+
         </div>
         
         <!--Payout-->
