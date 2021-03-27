@@ -82,28 +82,29 @@
             <h2 class="logo">Just do it</h2>
             <button id="btnHamburger" class="burger-btn btn"><i class="fas fa-bars"></i></button>
         </div>
-        
-        <div class="sidebar-menu">
-            <a class="sb-nav-link" href="#general"><i class="icon-general icon"></i>General</a>
-            <a class="sb-nav-link" href="#detail"><i class="icon-details icon"></i>Details</a>
-            <a class="sb-nav-link" href="#links"><i class="icon-links icon"></i>Links</a>
-            <a class="sb-nav-link" href="#banners"><i class="icon-banners icon"></i>Banners</a>
-            <a class="sb-nav-link" href="#personalData"><i class="icon-personaldata icon"></i>Personal data</a>
-            <a class="sb-nav-link" href="#payout"><i class="icon-payout icon"></i>Payout</a>
-            <a class="sb-nav-link" href="#postback"><i class="icon-postback icon"></i>Postback</a>
-            <a class="sb-nav-link tb-nav-link"><i class="icon-wallet icon "></i>$1,500.00<i class="icon-arrow-down icon"></i></a>
-            <a class="sb-nav-link tb-nav-link" href="#"><i class="icon-notification icon"></i></a>
-            <span class="orange-dot"></span>
-            <a class="sb-nav-link tb-nav-link link" id="login-2" href="#"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
-            <a class="sb-nav-link tb-nav-link" href="#"><i class="icon-quit icon" id="quit-2"></i></a>
-        </div>
-            
-        <div class="manager-container">
-            <p class="sub-title">YOUR MANAGER</p>
-            <div class="manager-list">
-                <img class="manager-img" src="images/manager-1.jpg" alt="">
-                <span class="green-dot"></span>
-                <a class="manager-name" id="message">Mikhael E.</a>
+        <div class="scroll-sidebar-menu">
+            <div class="sidebar-menu">
+                <a class="sb-nav-link" href="#general"><i class="icon-general icon"></i>General</a>
+                <a class="sb-nav-link" href="#detail"><i class="icon-details icon"></i>Details</a>
+                <a class="sb-nav-link" href="#links"><i class="icon-links icon"></i>Links</a>
+                <a class="sb-nav-link" href="#banners"><i class="icon-banners icon"></i>Banners</a>
+                <a class="sb-nav-link" href="#personalData"><i class="icon-personaldata icon"></i>Personal data</a>
+                <a class="sb-nav-link" href="#payout"><i class="icon-payout icon"></i>Payout</a>
+                <a class="sb-nav-link" href="#postback"><i class="icon-postback icon"></i>Postback</a>
+                <a class="sb-nav-link tb-nav-link" href="#general"><i class="icon-wallet icon "></i>$1,500.00<i class="icon-arrow-down icon"></i></a>
+                <a class="sb-nav-link tb-nav-link" href="#general"><i class="icon-notification icon"></i>Notification</a>
+                <span class="orange-dot"></span>
+                <a class="sb-nav-link tb-nav-link link" id="login-2" href="#general"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
+                <a class="sb-nav-link tb-nav-link" id="quit-2" href="#general"><i class="icon-quit icon"></i>Log out</a>
+            </div>
+                
+            <div class="manager-container">
+                <p class="sub-title">YOUR MANAGER</p>
+                <div class="manager-list">
+                    <img class="manager-img" src="images/manager-1.jpg" alt="">
+                    <span class="green-dot"></span>
+                    <a class="icon manager-name" id="message">Mikhael E.</a>
+                </div>
             </div>
         </div>
     </div>
@@ -112,7 +113,7 @@
     <div class="topbar">
             <ul class="topbar-menu">
                 <li class="topbar-item">
-                    <a class="tb-nav-link"><i class="icon-wallet icon"></i>$1,500.00</a>                    
+                    <a class="tb-nav-link icon"><i class="icon-wallet icon"></i>$1,500.00</a>                    
                     <a class="tb-nav-link" href="#"><i class="icon-arrow-down icon"></i></a>
                 </li>
                 <li class="topbar-item bell">
@@ -132,7 +133,7 @@
     <div class="main-container">
 
         <!--General-->
-        <div class="box general-container" id="general">
+        <div class="box general-container active" id="general">
 
             <div class="title-container">
                 <h3 class="title">GENERAL STATISTICS</h3>
@@ -424,7 +425,7 @@
         </div>
 
         <!--Detail-->
-        <div class="box detail-container active" id="detail">
+        <div class="box detail-container" id="detail">
 
             <div class="title-container">
                 <h3 class="title">DETAIL STATISTIC</h3>
@@ -442,21 +443,21 @@
                 </div>
             </div>
 
-            <div class="table-responsive-xl">
+            <div class="table-responsive-xl table-container">
                 <table class="table table-hover">
                   <thead>
                     <tr>
-                      <th scope="col">Tracker name</th>
-                      <th scope="col">Initiated date</th>
-                      <th scope="col">Visits</th>
-                      <th scope="col">Unique</th>
-                      <th scope="col">Signups</th>
-                      <th scope="col">FTD</th>
-                      <th scope="col">Depositors</th>
-                      <th scope="col">Deposits ($)</th>
-                      <th scope="col">Payout ($)</th>
-                      <th scope="col">Turnover</th>
-                      <th scope="col">Deal</th>
+                      <th scope="col" class="table-label">Tracker name</th>
+                      <th scope="col" class="table-label">Initiated date</th>
+                      <th scope="col" class="table-label">Visits</th>
+                      <th scope="col" class="table-label">Unique</th>
+                      <th scope="col" class="table-label">Signups</th>
+                      <th scope="col" class="table-label">FTD</th>
+                      <th scope="col" class="table-label">Depositors</th>
+                      <th scope="col" class="table-label">Deposits ($)</th>
+                      <th scope="col" class="table-label">Payout ($)</th>
+                      <th scope="col" class="table-label">Turnover</th>
+                      <th scope="col" class="table-label">Deal</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -571,10 +572,86 @@
         </div>
         
         <!--Payout-->
-        <div class="box payout-history-container" id="payout">
+        <div class="box payout-container" id="payout">
+
             <div class="title-container">
                 <h3 class="title">PAYOUT HISTORY</h3>
             </div>
+
+            <div class="general-date-picker">
+                <div class="date-picker">
+                    <form class="date-picker-form">
+                        <input type="date" name="date" class="date date-from">
+                        <input type="date" name="date" class="date date-to"><i class="icon-calendar icon"></i>
+                    </form>
+                </div>
+                <div class="btn-date-picker">
+                    <button class="btn btn-refresh"><i class="icon-refresh icon"></i></button>
+                </div>
+            </div>
+
+            <div class="table-responsive-md table-container">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="table-label">Date</th>
+                      <th scope="col" class="table-label">Amount ($)</th>
+                      <th scope="col" class="table-label">Deal</th>
+                      <th scope="col" class="table-label">Account</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">17/08/02 (12:58)</th>
+                      <td>34,425.00</td>
+                      <td>cpl(200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">15/08/02 (12:58)</th>
+                      <td>29,436.00</td>
+                      <td>cpl(200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">17/08/02 (12:58)</th>
+                      <td>34,425.00</td>
+                      <td>cpl(200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">15/08/02 (12:58)</th>
+                      <td>29,436.00</td>
+                      <td>cpl(200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">17/08/02 (12:58)</th>
+                      <td>34,425.00</td>
+                      <td>cpl(200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">15/08/02 (12:58)</th>
+                      <td>29,436.00</td>
+                      <td>cpl(200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">17/08/02 (12:58)</th>
+                      <td>34,425.00</td>
+                      <td>cpl(200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">15/08/02 (12:58)</th>
+                      <td>29,436.00</td>
+                      <td>cpl(200)</td>
+                      <td>bank</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
         </div>
 

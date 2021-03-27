@@ -1,0 +1,22 @@
+.table-container {
+  border-top: solid $main-text-color 1px;
+  padding: 20px;
+}
+
+
+.table {
+  thead{
+    color: $main-text-color;
+
+    .table-label {
+      &:hover {
+        background-color: $background-color;
+      }        
+    }    
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+

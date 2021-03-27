@@ -63,7 +63,6 @@
 
 @media (max-width: 767px) {
   .sidebar-container {
-    overflow: scroll;
     width: 50%;
     height: 60px;
     padding-right: 0;
@@ -84,12 +83,18 @@
       }
     }
 
-    .sidebar-menu {
+    .scroll-sidebar-menu {
+      width: 100%;
+      overflow: scroll;
       display: flex;
-      width: 250px;
+      flex-direction: column;
 
       .icon {
         margin-right: 10px;
+      }
+      
+      .icon-arrow-down {
+        margin-left: 10px;
       }
       
       .tb-nav-link {
