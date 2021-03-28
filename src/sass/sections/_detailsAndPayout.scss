@@ -3,20 +3,16 @@
   padding: 20px;
 }
 
+thead {
+  color: $main-text-color;
 
-.table {
-  thead{
-    color: $main-text-color;
-
-    .table-label {
-      &:hover {
-        background-color: $background-color;
-      }        
-    }    
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
+  .table-label {
+    &:hover {
+      background-color: $background-color;
+    }        
+  }    
 }
 
+.table:hover {
+  cursor: pointer;
+}

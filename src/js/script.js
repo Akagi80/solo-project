@@ -130,21 +130,22 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
+    labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
     datasets: [{
       label: 'Signups',
-      data: [350, 200, 220, 340, 410, 390, 300, 280, 200],
-      backgroundColor: '#56819F',          
+      data: [350, 200, 220, 340, 410, 390, 300, 280, 200, 400],
+      backgroundColor: '#8DBEC8',          
     },
     {
       label: 'FTD',
-      data: [400, 150, 300, 250, 420, 100, 190, 450, 350],
-      backgroundColor: '#F58220',
+      data: [400, 150, 300, 250, 420, 100, 190, 450, 350, 380],
+      backgroundColor: '#F29E4E',
     },
     {
       label: 'Earned',
-      data: [280, 190, 350, 430, 270, 130, 120, 190, 300],
-      backgroundColor: '#74b67a',
+      data: [280, 190, 350, 430, 270, 130, 120, 190, 300, 260],
+      backgroundColor: '#71B374',
+      hidden: true,
     }]
     },
   options: {
@@ -155,13 +156,6 @@ var myChart = new Chart(ctx, {
           max: 500,
         }
       }]
-    },
-    title: {
-      display: true,
-      fontSize: 17,
-      fontColor: '#979797',
-      align: 'start', // not work :(
-      text: 'Earnings chart',
     },
     legend: {
       display: true,

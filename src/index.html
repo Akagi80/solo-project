@@ -1,769 +1,767 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Just do it</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Just do it</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
 
-    <!--Modals-->
-    <div class="overlay" id="overlay">
-        <div class="modal modal-login" id="myModalLogin">
-            <div class="btn-close js--close-modal btn">x</div>
-            <form action="" method="POST">
+        <!--Modals-->
+        <div class="overlay" id="overlay">
+            <div class="modal modal-login" id="myModalLogin">
+                <div class="btn-close js--close-modal btn">x</div>
+                <form action="#" method="POST">
+                    <div class="title-container">
+                        <h3 class="title">Login</h3>
+                    </div>
+                    <div class="form-box">
+                        <div class="form form-item">
+                            <i class="icon-login icon"></i>
+                            <input type="text" name="text" minlength=5 placeholder="login name" required>
+                        </div>
+                        <div class="form form-item">
+                            <i class="icon-password icon"></i>
+                            <input type="password" name="password" minlength=5 placeholder="password" required>
+                        </div>
+                        <div class="btn-middle">
+                            <button class="btn" type="submit">Enter</button>
+                        </div>                
+                    </div>
+                </form>            
+            </div>
+
+            <div class="modal modal-message" id="myModalMessage">
+                <div class="btn-close js--close-modal btn">x</div>
                 <div class="title-container">
-                    <h3 class="title">Login</h3>
+                    <h3 class="title">ONLINE CHAT WITH YOU PERSONAL MANAGER</h3>
+                </div>            
+                <div class="manager-container">
+                    <div class="manager-list">
+                        <img class="manager-img" src="images/manager-1.jpg" alt="">
+                        <span class="green-dot"></span>
+                        <a class="manager-name">Mikhael E.</a>
+                    </div>
+                </div>
+                <div class="box conversation-box">
+
                 </div>
                 <div class="form-box">
-                    <div class="form form-item">
-                        <i class="icon-login icon"></i>
-                        <input type="text" name="text" minlength=5 placeholder="login name" required>
-                    </div>
-                    <div class="form form-item">
-                        <i class="icon-password icon"></i>
-                        <input type="password" name="password" minlength=5 placeholder="password" required>
+                    <div class="form message-item">
+                        <i class="icon-message icon"></i>
+                        <textarea name="message" placeholder="Enter the message.." cols="30" rows="2" maxlength="1000" required></textarea>
                     </div>
                     <div class="btn-middle">
-                        <button class="btn" type="submit">Enter</button>
-                    </div>                
-                </div>
-            </form>            
-        </div>
-
-        <div class="modal modal-message" id="myModalMessage">
-            <div class="btn-close js--close-modal btn">x</div>
-            <div class="title-container">
-                <h3 class="title">ONLINE CHAT WITH YOU PERSONAL MANAGER</h3>
-            </div>            
-            <div class="manager-container">
-                <div class="manager-list">
-                    <img class="manager-img" src="images/manager-1.jpg" alt="">
-                    <span class="green-dot"></span>
-                    <a class="manager-name">Mikhael E.</a>
+                        <button class="btn" type="submit">Send</button>
+                    </div> 
                 </div>
             </div>
-            <div class="box conversation-box">
 
-            </div>
-            <div class="form-box">
-                <div class="form message-item">
-                    <i class="icon-message icon"></i>
-                    <textarea name="message" placeholder="Enter the message.." cols="30" rows="2" maxlength="1000" required></textarea>
+            <div class="modal modal-quit" id="myModalQuit">
+                <div class="title-container">
+                    <h3 class="title">Do you realy want Quit?</h3>
                 </div>
-                <div class="btn-middle">
-                    <button class="btn" type="submit">Send</button>
-                </div> 
-            </div>
-        </div>
-
-        <div class="modal modal-quit" id="myModalQuit">
-            <div class="title-container">
-                <h3 class="title">Do you realy want Quit?</h3>
-            </div>
-            <div class="btn-quit">
-                <button class="btn btn-cancel js--close-modal" type="submit">Cancel</button>               
-                <button class="btn js--close-modal" type="submit">Quit</button> 
-            </div>
-
-        </div>
-    </div>
-         
-    <!--Sidebar-->
-    <div id="sidebar" class="sidebar-container">
-
-        <div class="header-container">
-            <h2 class="logo">Just do it</h2>
-            <button id="btnHamburger" class="burger-btn btn"><i class="fas fa-bars"></i></button>
-        </div>
-        <div class="scroll-sidebar-menu">
-            <div class="sidebar-menu">
-                <a class="sb-nav-link" href="#general"><i class="icon-general icon"></i>General</a>
-                <a class="sb-nav-link" href="#detail"><i class="icon-details icon"></i>Details</a>
-                <a class="sb-nav-link" href="#links"><i class="icon-links icon"></i>Links</a>
-                <a class="sb-nav-link" href="#banners"><i class="icon-banners icon"></i>Banners</a>
-                <a class="sb-nav-link" href="#personalData"><i class="icon-personaldata icon"></i>Personal data</a>
-                <a class="sb-nav-link" href="#payout"><i class="icon-payout icon"></i>Payout</a>
-                <a class="sb-nav-link" href="#postback"><i class="icon-postback icon"></i>Postback</a>
-                <a class="sb-nav-link tb-nav-link" href="#general"><i class="icon-wallet icon "></i>$1,500.00<i class="icon-arrow-down icon"></i></a>
-                <a class="sb-nav-link tb-nav-link" href="#general"><i class="icon-notification icon"></i>Notification</a>
-                <span class="orange-dot"></span>
-                <a class="sb-nav-link tb-nav-link link" id="login-2" href="#general"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
-                <a class="sb-nav-link tb-nav-link" id="quit-2" href="#general"><i class="icon-quit icon"></i>Log out</a>
-            </div>
-                
-            <div class="manager-container">
-                <p class="sub-title">YOUR MANAGER</p>
-                <div class="manager-list">
-                    <img class="manager-img" src="images/manager-1.jpg" alt="">
-                    <span class="green-dot"></span>
-                    <a class="icon manager-name" id="message">Mikhael E.</a>
+                <div class="btn-quit">
+                    <button class="btn btn-cancel js--close-modal" type="submit">Cancel</button>               
+                    <button class="btn js--close-modal" type="submit">Quit</button> 
                 </div>
+
             </div>
         </div>
-    </div>
+            
+        <!--Sidebar-->
+        <div id="sidebar" class="sidebar-container">
 
-    <!--Topbar-->
-    <div class="topbar">
-            <ul class="topbar-menu">
-                <li class="topbar-item">
-                    <a class="tb-nav-link icon"><i class="icon-wallet icon"></i>$1,500.00</a>                    
-                    <a class="tb-nav-link" href="#"><i class="icon-arrow-down icon"></i></a>
-                </li>
-                <li class="topbar-item bell">
-                    <a class="tb-nav-link" href="#"><i class="icon-notification icon"></i></a>
+            <div class="header-container">
+                <h2 class="logo">Just do it</h2>
+                <button id="btnHamburger" class="burger-btn btn"><i class="fas fa-bars"></i></button>
+            </div>
+            <div class="scroll-sidebar-menu">
+                <div class="sidebar-menu">
+                    <a class="sb-nav-link" href="#general"><i class="icon-general icon"></i>General</a>
+                    <a class="sb-nav-link" href="#detail"><i class="icon-details icon"></i>Details</a>
+                    <a class="sb-nav-link" href="#links"><i class="icon-links icon"></i>Links</a>
+                    <a class="sb-nav-link" href="#banners"><i class="icon-banners icon"></i>Banners</a>
+                    <a class="sb-nav-link" href="#personalData"><i class="icon-personaldata icon"></i>Personal data</a>
+                    <a class="sb-nav-link" href="#payout"><i class="icon-payout icon"></i>Payout</a>
+                    <a class="sb-nav-link" href="#postback"><i class="icon-postback icon"></i>Postback</a>
+                    <a class="sb-nav-link tb-nav-link" href="#general"><i class="icon-wallet icon "></i>$1,500.00<i class="icon-arrow-down icon"></i></a>
+                    <a class="sb-nav-link tb-nav-link" href="#general"><i class="icon-notification icon"></i>Notification</a>
                     <span class="orange-dot"></span>
-                </li>
-                <li class="topbar-item">
-                    <a class="tb-nav-link link" id="login" href="#"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
-                </li>
-                <li class="topbar-item">
-                    <a class="tb-nav-link" href="#"><i class="icon-quit icon" id="quit"></i></a>
-                </li>
-            </ul>
-    </div>
-        
-    <!--Main-->
-    <div class="main-container">
-
-        <!--General-->
-        <div class="box general-container active" id="general">
-
-            <div class="title-container">
-                <h3 class="title">GENERAL STATISTICS</h3>
-            </div>
-
-            <div class="general-date-picker">
-                <div class="date-picker">
-                    <form class="date-picker-form">
-                        <input type="date" name="date" class="date date-from">
-                        <input type="date" name="date" class="date date-to">
-                        <div class="ico"><i class="icon-calendar icon"></i></div>
-                    </form>
+                    <a class="sb-nav-link tb-nav-link link" id="login-2" href="#general"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
+                    <a class="sb-nav-link tb-nav-link" id="quit-2" href="#general"><i class="icon-quit icon"></i>Log out</a>
                 </div>
-                <div class="btn-date-picker">
-                    <button class="btn btn-refresh"><i class="icon-refresh icon"></i></button>
-                </div>
-            </div>
-
-            <div class="stats">
-                <div class="stat-left stat-box">
-                    <div class="stat-details">
-                        <p class="stat-title">Visit Signups</p>
-                        <p class="value">124</p>
-                    </div>
-                    <div class="stat-details">
-                        <p class="stat-title">FTD</p>
-                        <p class="value">445</p>
-                    </div>
-                </div>
-
-                <div class="stat-right stat-box">
-                    <div class="stat-details">
-                        <p class="stat-title">Net Deposit</p>
-                        <p class="value">564</p>
-                    </div>
-                    <div class="stat-details">
-                        <p class="stat-title">Turn over</p>
-                        <p class="value">432</p>
+                    
+                <div class="manager-container">
+                    <p class="sub-title">YOUR MANAGER</p>
+                    <div class="manager-list">
+                        <img class="manager-img" src="images/manager-1.jpg" alt="">
+                        <span class="green-dot"></span>
+                        <a class="icon manager-name" id="message">Mikhael E.</a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="scroll-wrapper">
-                <table>
+        <!--Topbar-->
+        <div class="topbar">
+                <ul class="topbar-menu">
+                    <li class="topbar-item">
+                        <a class="tb-nav-link icon"><i class="icon-wallet icon"></i>$1,500.00</a>                    
+                        <a class="tb-nav-link" href="#"><i class="icon-arrow-down icon"></i></a>
+                    </li>
+                    <li class="topbar-item bell">
+                        <a class="tb-nav-link" href="#"><i class="icon-notification icon"></i></a>
+                        <span class="orange-dot"></span>
+                    </li>
+                    <li class="topbar-item">
+                        <a class="tb-nav-link link" id="login" href="#"><i class="icon-profile icon"></i>Leonardo Dicaprio</a>
+                    </li>
+                    <li class="topbar-item">
+                        <a class="tb-nav-link" href="#"><i class="icon-quit icon" id="quit"></i></a>
+                    </li>
+                </ul>
+        </div>
+            
+        <!--Main-->
+        <div class="main-container">
+
+            <!--General-->
+            <div class="box general-container active" id="general">
+
+                <div class="title-container">
+                    <h3 class="title">GENERAL STATISTICS</h3>
+                </div>
+
+                <div class="general-date-picker">
+                    <div class="date-picker">
+                        <form class="date-picker-form">
+                            <input type="date" name="date" class="date date-from">
+                            <input type="date" name="date" class="date date-to">
+                            <div class="ico"><i class="icon-calendar icon"></i></div>
+                        </form>
+                    </div>
+                    <div class="btn-date-picker">
+                        <button class="btn btn-refresh"><i class="icon-refresh icon"></i></button>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-left stat-box">
+                        <div class="stat-details">
+                            <p class="stat-title">Visit Signups</p>
+                            <p class="value">124</p>
+                        </div>
+                        <div class="stat-details">
+                            <p class="stat-title">FTD</p>
+                            <p class="value">445</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-right stat-box">
+                        <div class="stat-details">
+                            <p class="stat-title">Net Deposit</p>
+                            <p class="value">564</p>
+                        </div>
+                        <div class="stat-details">
+                            <p class="stat-title">Turn over</p>
+                            <p class="value">432</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-wrapper">
                     <div class="chart-container">
-                        <canvas id="myChart"></canvas>
-                    </div> 
-                </table>
-            </div>   
-
-                        
-        </div>
-
-        <!--Links-->
-        <div class="box links-container" id="links">
-
-            <div class="title-container">
-                <h3 class="title">LINKS</h3>
+                            <p class="stat-title">Earnings chart</p>
+                            <canvas id="myChart"></canvas>
+                    </div>
+                </div>                         
             </div>
 
-            <div class="links-table">
-                <div class="btn-middle">
-                    <button class="btn">+ add new</button>
-                </div>
-                <div class="links-list">
-                    <ul>
-                        <li class="link-item">
-                            <p class="stat-title">Home page</p>
-                            <a class="link" href="#">http://www.homepage.com</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Currently offer</p>
-                            <a class="link" href="#">http://www.currently.com</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Bulprix</p>
-                            <a class="link" href="#">http://www.bulprix.com</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Your Site</p>
-                            <a class="link" href="#">http://www.yoursite.com</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Google</p>
-                            <a class="link" href="#">http://www.google.com</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Facebook</p>
-                            <a class="link" href="#">http://www.facebook.com</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Dashboard</p>
-                            <a class="link" href="#">http://www.dashboard.com</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Blurax</p>
-                            <a class="link" href="#">http://www.blurax.com</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Piece of wine</p>
-                            <a class="link" href="#">http://www.pieceofwine.com</a>                                    
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>                                    
-                        </li>
-                        <li class="link-item last-link">
-                            <p class="stat-title">Twitter</p>
-                            <a class="link" href="#">http://www.twitter.com</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>                
-                <div class="btn-middle">
-                    <button class="btn">+ add new</button>
-                </div>
-            </div>         
-        </div> 
+            <!--Links-->
+            <div class="box links-container" id="links">
 
-        <!--Banners-->
-        <div class="box banners-container" id="banners">
-
-            <div class="title-container">
-                <h3 class="title">BANNERS</h3>
-            </div>
-
-            <div class="links-table">
-                <div class="btn-middle">
-                    <button class="btn">+ add new</button>
-                </div>
-                <div class="links-list">
-                    <ul>
-                        <li class="link-item">
-                            <p class="stat-title">Banner main</p>
-                            <a class="link" href="#">http://www.website.com/bannermain.gif</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Signup banner</p>
-                            <a class="link" href="#">http://www.website.com/signup.gif</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Banner left site</p>
-                            <a class="link" href="#">http://www.website.com/leftsite.gif</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Vertical banner</p>
-                            <a class="link" href="#">http://www.website.com/vert.gif</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item">
-                            <p class="stat-title">Front banner</p>
-                            <a class="link" href="#">http://www.website.com/front.gif</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>
-                        <li class="link-item last-link">
-                            <p class="stat-title">Horizontal banner</p>
-                            <a class="link" href="#">http://www.website.com/horizontal.gif</a>
-                            <div class="link-icons">
-                                <i class="icon-links icon"></i>
-                                <i class="icon-trash icon"></i>
-                            </div>
-                        </li>                        
-                    </ul>
-                </div>                
-                <div class="btn-middle">
-                    <button class="btn">+ add new</button>
-                </div>
-            </div>
-
-        </div>
-
-        <!--Data-->
-        <div class="box personal-data-container" id="personalData">
-
-            <div class="title-container">
-                <h3 class="title">PERSONAL DATA</h3>
-            </div>
-
-            <form action="" method="POST">
-                <div class="form-box">
-                    <div class="form">
-                        <label>Name</label>
-                        <input type="text" name="name" required>
-                    </div>
-                    <div class="form">
-                        <label>Surname</label>
-                        <input type="text" name="surname" required>
-                    </div>
-                    <div class="form">
-                        <label>E-mail</label>
-                        <input type="email" name="email" required>
-                    </div>
-                    <div class="form">
-                        <label>Phone number</label>
-                        <input type="number" name="phone-number">
-                    </div>
-                </div>
-                    
-                <div class="form-box">
-                    <div class="form">
-                        <label>Skype</label>
-                        <input type="text" name="skype">
-                    </div>
-                    <div class="form">
-                        <label>ICQ</label>
-                        <input type="text" name="icq">
-                    </div>
-                    <div class="form">
-                        <label>Msn</label>
-                        <input type="text" name="msn">
-                    </div> 
-                </div>                   
-                
-                <div class="form-box">
-                    <div class="form">
-                        <label>Wallet</label>
-                        <input type="number" name="wallet" required>
-                    </div>   
-                </div>                 
-                    
-                <div class="form-box">
-                    <div class="form">
-                        <label>Password</label>
-                        <input type="password" name="password" minlength=5 required>
-                    </div>
-                    <div class="form">
-                        <label>Repeat</label>
-                        <input type="password" name="repeat" minlength=5 required>
-                    </div>
+                <div class="title-container">
+                    <h3 class="title">LINKS</h3>
                 </div>
 
-                <div class="btn-middle">
-                    <button class="btn" type="submit">Save</button>
-                </div>                    
-            </form>
-        </div>
-
-        <!--Detail-->
-        <div class="box detail-container" id="detail">
-
-            <div class="title-container">
-                <h3 class="title">DETAIL STATISTIC</h3>
-            </div>
-
-            <div class="general-date-picker">
-                <div class="date-picker">
-                    <form class="date-picker-form">
-                        <input type="date" name="date" class="date date-from">
-                        <input type="date" name="date" class="date date-to"><i class="icon-calendar icon"></i>
-                    </form>
-                </div>
-                <div class="btn-date-picker">
-                    <button class="btn btn-refresh"><i class="icon-refresh icon"></i></button>
-                </div>
-            </div>
-
-            <div class="table-responsive-xl table-container">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col" class="table-label">Tracker name</th>
-                      <th scope="col" class="table-label">Initiated date</th>
-                      <th scope="col" class="table-label">Visits</th>
-                      <th scope="col" class="table-label">Unique</th>
-                      <th scope="col" class="table-label">Signups</th>
-                      <th scope="col" class="table-label">FTD</th>
-                      <th scope="col" class="table-label">Depositors</th>
-                      <th scope="col" class="table-label">Deposits ($)</th>
-                      <th scope="col" class="table-label">Payout ($)</th>
-                      <th scope="col" class="table-label">Turnover</th>
-                      <th scope="col" class="table-label">Deal</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">aff/sam_test</th>
-                      <td>17/08/02 (12:58)</td>
-                      <td>232</td>
-                      <td>114</td>
-                      <td>12</td>
-                      <td>6</td>
-                      <td>3</td>
-                      <td>34,425.00</td>
-                      <td>234.00</td>
-                      <td>421,342.00</td>
-                      <td>cpl (200)</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">aff/leo_test</th>
-                      <td>15/08/02 (12:58)</td>
-                      <td>232</td>
-                      <td>114</td>
-                      <td>12</td>
-                      <td>6</td>
-                      <td>3</td>
-                      <td>29,436.00</td>
-                      <td>941.00</td>
-                      <td>784,435.00</td>
-                      <td>cpl (200)</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">aff/sam_test</th>
-                      <td>17/08/02 (12:58)</td>
-                      <td>232</td>
-                      <td>114</td>
-                      <td>12</td>
-                      <td>6</td>
-                      <td>3</td>
-                      <td>34,425.00</td>
-                      <td>234.00</td>
-                      <td>421,342.00</td>
-                      <td>cpl (200)</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">aff/leo_test</th>
-                      <td>15/08/02 (12:58)</td>
-                      <td>232</td>
-                      <td>114</td>
-                      <td>12</td>
-                      <td>6</td>
-                      <td>3</td>
-                      <td>29,436.00</td>
-                      <td>941.00</td>
-                      <td>784,435.00</td>
-                      <td>cpl (200)</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">aff/sam_test</th>
-                      <td>17/08/02 (12:58)</td>
-                      <td>232</td>
-                      <td>114</td>
-                      <td>12</td>
-                      <td>6</td>
-                      <td>3</td>
-                      <td>34,425.00</td>
-                      <td>234.00</td>
-                      <td>421,342.00</td>
-                      <td>cpl (200)</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">aff/leo_test</th>
-                      <td>15/08/02 (12:58)</td>
-                      <td>232</td>
-                      <td>114</td>
-                      <td>12</td>
-                      <td>6</td>
-                      <td>3</td>
-                      <td>29,436.00</td>
-                      <td>941.00</td>
-                      <td>784,435.00</td>
-                      <td>cpl (200)</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">aff/sam_test</th>
-                      <td>17/08/02 (12:58)</td>
-                      <td>232</td>
-                      <td>114</td>
-                      <td>12</td>
-                      <td>6</td>
-                      <td>3</td>
-                      <td>34,425.00</td>
-                      <td>234.00</td>
-                      <td>421,342.00</td>
-                      <td>cpl (200)</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">aff/leo_test</th>
-                      <td>15/08/02 (12:58)</td>
-                      <td>232</td>
-                      <td>114</td>
-                      <td>12</td>
-                      <td>6</td>
-                      <td>3</td>
-                      <td>29,436.00</td>
-                      <td>941.00</td>
-                      <td>784,435.00</td>
-                      <td>cpl (200)</td>
-                    </tr>
-                  </tbody>
-                  </table>
-              </div>
-
-        </div>
-        
-        <!--Payout-->
-        <div class="box payout-container" id="payout">
-
-            <div class="title-container">
-                <h3 class="title">PAYOUT HISTORY</h3>
-            </div>
-
-            <div class="general-date-picker">
-                <div class="date-picker">
-                    <form class="date-picker-form">
-                        <input type="date" name="date" class="date date-from">
-                        <input type="date" name="date" class="date date-to"><i class="icon-calendar icon"></i>
-                    </form>
-                </div>
-                <div class="btn-date-picker">
-                    <button class="btn btn-refresh"><i class="icon-refresh icon"></i></button>
-                </div>
-            </div>
-
-            <div class="table-responsive-md table-container">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col" class="table-label">Date</th>
-                      <th scope="col" class="table-label">Amount ($)</th>
-                      <th scope="col" class="table-label">Deal</th>
-                      <th scope="col" class="table-label">Account</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">17/08/02 (12:58)</th>
-                      <td>34,425.00</td>
-                      <td>cpl(200)</td>
-                      <td>bank</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">15/08/02 (12:58)</th>
-                      <td>29,436.00</td>
-                      <td>cpl(200)</td>
-                      <td>bank</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">17/08/02 (12:58)</th>
-                      <td>34,425.00</td>
-                      <td>cpl(200)</td>
-                      <td>bank</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">15/08/02 (12:58)</th>
-                      <td>29,436.00</td>
-                      <td>cpl(200)</td>
-                      <td>bank</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">17/08/02 (12:58)</th>
-                      <td>34,425.00</td>
-                      <td>cpl(200)</td>
-                      <td>bank</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">15/08/02 (12:58)</th>
-                      <td>29,436.00</td>
-                      <td>cpl(200)</td>
-                      <td>bank</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">17/08/02 (12:58)</th>
-                      <td>34,425.00</td>
-                      <td>cpl(200)</td>
-                      <td>bank</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">15/08/02 (12:58)</th>
-                      <td>29,436.00</td>
-                      <td>cpl(200)</td>
-                      <td>bank</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-        </div>
-
-        <!--Postback-->
-        <div class="box postback-container" id="postback">
-
-            <div class="title-container">
-                <h3 class="title">NEW POSTBACK</h3>
-            </div>
-
-            <div class="text-container">
-                <p class="subtitle">You can insert some parameters in this postback:</p>
-            </div>
-
-             <form action="" method="POST">
-                <div class="postback-box">                
-                    <div class="inside-box">
-                        <p>Signup</p>
-                        <div class="info-box"></div>
+                <div class="links-table">
+                    <div class="btn-middle">
+                        <button class="btn">+ add new</button>
                     </div>
-                    <div class="inside-box"> 
-                        <p>Deposit</p>
-                        <div class="info-box"></div>             
-                    </div>               
-                </div>
-                <div class="postback-box middle-box">
-                    <div class="inside-box">
-                        <p>Postback type</p>
-                        <div class="select-box">
-                            <select name="type">
-                                <option value="">S2S (http://..)</option>
-                                <option value="Select-1">Option 1</option>
-                                <option value="Select-2">Option 2</option>
-                                <option value="Select-3">Option 3</option>
-                            </select>                       
-                        </div>
-                    </div>
-                    <div class="inside-box">
-                        <p>To coutries</p>
-                        <div class="select-box">
-                            <select name="coutries">
-                                <option value="">Select coutries</option>
-                                <option value="Select-1">Option 1</option>
-                                <option value="Select-2">Option 2</option>
-                                <option value="Select-3">Option 3</option>
-                            </select>                        
-                        </div>
-                    </div>
-                    <div class="inside-box">
-                        <p>Sending options</p>
-                        <div class="select-box">
-                            <select name="options">
-                                <option value="">Select</option>
-                                <option value="Select-1">Option 1</option>
-                                <option value="Select-2">Option 2</option>
-                                <option value="Select-3">Option 3</option>
-                            </select>                       
-                        </div>
+                    <div class="links-list">
+                        <ul>
+                            <li class="link-item">
+                                <p class="stat-title">Home page</p>
+                                <a class="link" href="#">http://www.homepage.com</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Currently offer</p>
+                                <a class="link" href="#">http://www.currently.com</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Bulprix</p>
+                                <a class="link" href="#">http://www.bulprix.com</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Your Site</p>
+                                <a class="link" href="#">http://www.yoursite.com</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Google</p>
+                                <a class="link" href="#">http://www.google.com</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Facebook</p>
+                                <a class="link" href="#">http://www.facebook.com</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Dashboard</p>
+                                <a class="link" href="#">http://www.dashboard.com</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Blurax</p>
+                                <a class="link" href="#">http://www.blurax.com</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Piece of wine</p>
+                                <a class="link" href="#">http://www.pieceofwine.com</a>                                    
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>                                    
+                            </li>
+                            <li class="link-item last-link">
+                                <p class="stat-title">Twitter</p>
+                                <a class="link" href="#">http://www.twitter.com</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                        </ul>
                     </div>                
+                    <div class="btn-middle">
+                        <button class="btn">+ add new</button>
+                    </div>
+                </div>         
+            </div> 
+
+            <!--Banners-->
+            <div class="box banners-container" id="banners">
+
+                <div class="title-container">
+                    <h3 class="title">BANNERS</h3>
                 </div>
-                <div class="postback-box last-box">
+
+                <div class="links-table">
+                    <div class="btn-middle">
+                        <button class="btn">+ add new</button>
+                    </div>
+                    <div class="links-list">
+                        <ul>
+                            <li class="link-item">
+                                <p class="stat-title">Banner main</p>
+                                <a class="link" href="#">http://www.website.com/bannermain.gif</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Signup banner</p>
+                                <a class="link" href="#">http://www.website.com/signup.gif</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Banner left site</p>
+                                <a class="link" href="#">http://www.website.com/leftsite.gif</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Vertical banner</p>
+                                <a class="link" href="#">http://www.website.com/vert.gif</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item">
+                                <p class="stat-title">Front banner</p>
+                                <a class="link" href="#">http://www.website.com/front.gif</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>
+                            <li class="link-item last-link">
+                                <p class="stat-title">Horizontal banner</p>
+                                <a class="link" href="#">http://www.website.com/horizontal.gif</a>
+                                <div class="link-icons">
+                                    <i class="icon-links icon"></i>
+                                    <i class="icon-trash icon"></i>
+                                </div>
+                            </li>                        
+                        </ul>
+                    </div>                
+                    <div class="btn-middle">
+                        <button class="btn">+ add new</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Data-->
+            <div class="box personal-data-container" id="personalData">
+
+                <div class="title-container">
+                    <h3 class="title">PERSONAL DATA</h3>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="form-box">
+                        <div class="form">
+                            <label>Name</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form">
+                            <label>Surname</label>
+                            <input type="text" name="surname" required>
+                        </div>
+                        <div class="form">
+                            <label>E-mail</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form">
+                            <label>Phone number</label>
+                            <input type="number" name="phone-number">
+                        </div>
+                    </div>
+                        
+                    <div class="form-box">
+                        <div class="form">
+                            <label>Skype</label>
+                            <input type="text" name="skype">
+                        </div>
+                        <div class="form">
+                            <label>ICQ</label>
+                            <input type="text" name="icq">
+                        </div>
+                        <div class="form">
+                            <label>Msn</label>
+                            <input type="text" name="msn">
+                        </div> 
+                    </div>                   
                     
-                    <div class="inside-last-box">  
-                        <p><span>NOT</span> send statuses</p>
-                        <div class="scroll-wrapper">
-                            <table>
+                    <div class="form-box">
+                        <div class="form">
+                            <label>Wallet</label>
+                            <input type="number" name="wallet" required>
+                        </div>   
+                    </div>                 
+                        
+                    <div class="form-box">
+                        <div class="form">
+                            <label>Password</label>
+                            <input type="password" name="password" minlength=5 required>
+                        </div>
+                        <div class="form">
+                            <label>Repeat</label>
+                            <input type="password" name="repeat" minlength=5 required>
+                        </div>
+                    </div>
+
+                    <div class="btn-middle">
+                        <button class="btn" type="submit">Save</button>
+                    </div>                    
+                </form>
+            </div>
+
+            <!--Detail-->
+            <div class="box detail-container" id="detail">
+
+                <div class="title-container">
+                    <h3 class="title">DETAIL STATISTIC</h3>
+                </div>
+
+                <div class="general-date-picker">
+                    <div class="date-picker">
+                        <form class="date-picker-form">
+                            <input type="date" name="date" class="date date-from">
+                            <input type="date" name="date" class="date date-to"><i class="icon-calendar icon"></i>
+                        </form>
+                    </div>
+                    <div class="btn-date-picker">
+                        <button class="btn btn-refresh"><i class="icon-refresh icon"></i></button>
+                    </div>
+                </div>
+
+                <div class="table-responsive-xl table-container">
+                    <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col" class="table-label">Tracker name</th>
+                        <th scope="col" class="table-label">Initiated date</th>
+                        <th scope="col" class="table-label">Visits</th>
+                        <th scope="col" class="table-label">Unique</th>
+                        <th scope="col" class="table-label">Signups</th>
+                        <th scope="col" class="table-label">FTD</th>
+                        <th scope="col" class="table-label">Depositors</th>
+                        <th scope="col" class="table-label">Deposits ($)</th>
+                        <th scope="col" class="table-label">Payout ($)</th>
+                        <th scope="col" class="table-label">Turnover</th>
+                        <th scope="col" class="table-label">Deal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">aff/sam_test</th>
+                        <td>17/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>34,425.00</td>
+                        <td>234.00</td>
+                        <td>421,342.00</td>
+                        <td>cpl (200)</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">aff/leo_test</th>
+                        <td>15/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>29,436.00</td>
+                        <td>941.00</td>
+                        <td>784,435.00</td>
+                        <td>cpl (200)</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">aff/sam_test</th>
+                        <td>17/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>34,425.00</td>
+                        <td>234.00</td>
+                        <td>421,342.00</td>
+                        <td>cpl (200)</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">aff/leo_test</th>
+                        <td>15/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>29,436.00</td>
+                        <td>941.00</td>
+                        <td>784,435.00</td>
+                        <td>cpl (200)</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">aff/sam_test</th>
+                        <td>17/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>34,425.00</td>
+                        <td>234.00</td>
+                        <td>421,342.00</td>
+                        <td>cpl (200)</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">aff/leo_test</th>
+                        <td>15/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>29,436.00</td>
+                        <td>941.00</td>
+                        <td>784,435.00</td>
+                        <td>cpl (200)</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">aff/sam_test</th>
+                        <td>17/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>34,425.00</td>
+                        <td>234.00</td>
+                        <td>421,342.00</td>
+                        <td>cpl (200)</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">aff/leo_test</th>
+                        <td>15/08/02 (12:58)</td>
+                        <td>232</td>
+                        <td>114</td>
+                        <td>12</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>29,436.00</td>
+                        <td>941.00</td>
+                        <td>784,435.00</td>
+                        <td>cpl (200)</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+            </div>
+            
+            <!--Payout-->
+            <div class="box payout-container" id="payout">
+
+                <div class="title-container">
+                    <h3 class="title">PAYOUT HISTORY</h3>
+                </div>
+
+                <div class="general-date-picker">
+                    <div class="date-picker">
+                        <form class="date-picker-form">
+                            <input type="date" name="date" class="date date-from">
+                            <input type="date" name="date" class="date date-to"><i class="icon-calendar icon"></i>
+                        </form>
+                    </div>
+                    <div class="btn-date-picker">
+                        <button class="btn btn-refresh"><i class="icon-refresh icon"></i></button>
+                    </div>
+                </div>
+
+                <div class="table-responsive-md table-container">
+                    <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col" class="table-label">Date</th>
+                        <th scope="col" class="table-label">Amount ($)</th>
+                        <th scope="col" class="table-label">Deal</th>
+                        <th scope="col" class="table-label">Account</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">17/08/02 (12:58)</th>
+                        <td>34,425.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">15/08/02 (12:58)</th>
+                        <td>29,436.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">17/08/02 (12:58)</th>
+                        <td>34,425.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">15/08/02 (12:58)</th>
+                        <td>29,436.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">17/08/02 (12:58)</th>
+                        <td>34,425.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">15/08/02 (12:58)</th>
+                        <td>29,436.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">17/08/02 (12:58)</th>
+                        <td>34,425.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">15/08/02 (12:58)</th>
+                        <td>29,436.00</td>
+                        <td>cpl(200)</td>
+                        <td>bank</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <!--Postback-->
+            <div class="box postback-container" id="postback">
+
+                <div class="title-container">
+                    <h3 class="title">NEW POSTBACK</h3>
+                </div>
+
+                <div class="text-container">
+                    <p class="subtitle">You can insert some parameters in this postback:</p>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="postback-box">                
+                        <div class="inside-box">
+                            <p>Signup</p>
+                            <div class="info-box">
+                                <textarea name="message"></textarea>
+                            </div>
+                        </div>
+                        <div class="inside-box"> 
+                            <p>Deposit</p>
+                            <div class="info-box">
+                                <textarea name="message"></textarea>
+                            </div>             
+                        </div>               
+                    </div>
+                    <div class="postback-box middle-box">
+                        <div class="inside-box">
+                            <p>Postback type</p>
+                            <div class="select-box">
+                                <select name="type">
+                                    <option value="">S2S (http://..)</option>
+                                    <option value="Select-1">Option 1</option>
+                                    <option value="Select-2">Option 2</option>
+                                    <option value="Select-3">Option 3</option>
+                                </select>                       
+                            </div>
+                        </div>
+                        <div class="inside-box">
+                            <p>To coutries</p>
+                            <div class="select-box">
+                                <select name="coutries">
+                                    <option value="">Select coutries</option>
+                                    <option value="Select-1">Option 1</option>
+                                    <option value="Select-2">Option 2</option>
+                                    <option value="Select-3">Option 3</option>
+                                </select>                        
+                            </div>
+                        </div>
+                        <div class="inside-box">
+                            <p>Sending options</p>
+                            <div class="select-box">
+                                <select name="options">
+                                    <option value="">Select</option>
+                                    <option value="Select-1">Option 1</option>
+                                    <option value="Select-2">Option 2</option>
+                                    <option value="Select-3">Option 3</option>
+                                </select>                       
+                            </div>
+                        </div>                
+                    </div>
+                    <div class="postback-box last-box">
+                        
+                        <div class="inside-last-box">  
+                            <p><span>NOT</span> send statuses</p>
+                            <div class="scroll-wrapper">                                
                                 <div class="type-box">
                                     <div class="statueses">
-                                        <input type="checkbox" name="vehicle1" value="Bike">
-                                        <label for="vehicle1">checkNumber</label><br>
+                                        <input type="checkbox" name="check-number" value="Bike">
+                                        <label>checkNumber</label><br>
                                     </div>
                                     <div class="statueses">
-                                        <input type="checkbox" name="vehicle1" value="Bike">
-                                        <label for="vehicle1">noAnswer</label><br>
+                                        <input type="checkbox" name="no-answer" value="Bike">
+                                        <label>noAnswer</label><br>
                                     </div>
                                     <div class="statueses">
-                                        <input type="checkbox" name="vehicle1" value="Bike">
-                                        <label for="vehicle1">noCall</label><br>
+                                        <input type="checkbox" name="no-call" value="Bike">
+                                        <label>noCall</label><br>
                                     </div>
                                     <div class="statueses">
-                                        <input type="checkbox" name="vehicle1" value="Bike">
-                                        <label for="vehicle1">callAgain</label><br>
+                                        <input type="checkbox" name="call-again" value="Bike">
+                                        <label>callAgain</label><br>
                                     </div>
                                     <div class="statueses">
-                                        <input type="checkbox" name="vehicle1" value="Bike">
-                                        <label for="vehicle1">noMail</label><br>
+                                        <input type="checkbox" name="no-mail" value="Bike">
+                                        <label>noMail</label><br>
                                     </div>
                                     <div class="statueses">
-                                        <input type="checkbox" name="vehicle1" value="Bike">
-                                        <label for="vehicle1">mailAgain</label><br>
+                                        <input type="checkbox" name="mail-again" value="Bike">
+                                        <label>mailAgain</label><br>
                                     </div>                           
-                                </div>
-                            </table>
-                        </div>        
+                                </div>                                
+                            </div>        
+                        </div>
+
+                        <div class="inside-last-box">
+                            <p>Send after:</p>
+                            <div class="type-box">
+                                <input type="range" min="1" max="168" value="84" class="slider" id="myRange">
+                            </div>           
+                        </div>             
                     </div>
-
-                    <div class="inside-last-box">
-                        <p>Send after:</p>
-                        <div class="type-box">
-                            <input type="range" min="1" max="168" value="84" class="slider" id="myRange">
-                        </div>           
-                    </div>             
-                </div>
+                </form>
                 <div class="postback-btn">
-                    <button class="btn" type="submit">Create Pixel</button>
-                </div>
-            </form>
+                        <button class="btn" type="submit">Create Pixel</button>
+                    </div>
+            </div>
         </div>
-
-    </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <script src="js/script.js" type="module"></script>
-</body>
-</html>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+        <script src="js/script.js" type="module"></script>
+    </body>
+    </html>

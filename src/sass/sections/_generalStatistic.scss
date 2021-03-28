@@ -1,6 +1,7 @@
+
 .chart-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
   margin: 20px auto;
   padding: 20px 0;
@@ -20,5 +21,9 @@
     .stat-details {
       margin: 0;  
     }
+  }
+
+  .chart-container {
+    margin: 20px 5px;
   }
 }  
